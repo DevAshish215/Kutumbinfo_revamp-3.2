@@ -1,0 +1,798 @@
+/* KYCPlus Page Styles */
+
+/* Hero Section */
+.product-hero-section {
+    position: relative;
+    padding: 6.25em 0;
+    background: linear-gradient(135deg, #003366, #002244);
+    color: white;
+    overflow: hidden;
+}
+
+.product-hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 75em;
+    margin: 0 auto;
+    padding: 0 1.25em;
+    gap: 2.5em;
+}
+
+.product-hero-content {
+    flex: 1;
+    max-width: 37.5em;
+}
+
+.product-hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.product-hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.625em;
+    box-shadow: 0 0.9375em 1.875em rgba(0, 0, 0, 0.2);
+}
+
+.breadcrumb {
+    font-size: 0.9rem;
+    margin-bottom: 1.25em;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.product-hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.25em;
+    font-weight: 700;
+    color: white;
+}
+
+.product-hero-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5625em;
+    font-weight: 400;
+    line-height: 1.4;
+    color: white;
+}
+
+.product-hero-content p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 1em;
+    color: var(--text-secondary);
+}
+
+.hero-cta {
+    display: flex;
+    gap: 1.25em;
+    margin-top: 1.875em;
+}
+
+/* KYC Simplification Partner Section */
+.solution-section {
+    padding: 4.375em 0;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 75em;
+    margin: 0 auto;
+    padding: 0 1.25em;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3.125em;
+}
+
+.section-header h2 {
+    color: #192939;
+    font-size: 2.5rem;
+    margin-bottom: 0.9375em;
+}
+
+.overview-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+}
+
+.overview-text {
+    text-align: center;
+    max-width: 50em;
+    margin: 0 auto;
+}
+
+.overview-text p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 1em;
+    color: var(--text-secondary);
+}
+
+.advantages-container {
+    display: flex;
+    align-items: center;
+    gap: 2.5em;
+    margin-top: 1.875em;
+}
+
+.advantages-card {
+    flex: 1;
+    background-color: white;
+    border-radius: 0.75em;
+    padding: 1.875em;
+    box-shadow: 0 0.625em 1.5625em rgba(0, 0, 0, 0.05);
+}
+
+.card-header h3 {
+    color: #192939;
+    font-size: 1.8rem;
+    margin-bottom: 1.5625em;
+}
+
+.advantages-list {
+    list-style: none;
+    padding: 0;
+}
+
+.advantages-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.9375em;
+    margin-bottom: 1.25em;
+}
+
+.icon-container {
+    width: 2.5em;
+    height: 2.5em;
+    background-color: #f0f7ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-container i {
+    color: #192939;
+    font-size: 1.125rem;
+}
+
+.advantages-list span {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.advantages-image {
+    flex: 1;
+}
+
+.image-container {
+    border-radius: 0.75em;
+    overflow: hidden;
+    box-shadow: 0 0.9375em 1.875em rgba(0, 0, 0, 0.1);
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .advantages-container {
+        flex-direction: column;
+    }
+    
+    .advantages-card {
+        width: 100%;
+    }
+    
+    .advantages-image {
+        width: 100%;
+    }
+}
+
+/* Compliance Without Complexity Section */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15.625em, 1fr));
+    gap: 1.875em;
+    margin-top: 2.5em;
+}
+
+.compliance-card {
+    background-color: white;
+    border-radius: 0.75em;
+    padding: 1.875em;
+    box-shadow: 0 0.625em 1.5625em rgba(0, 0, 0, 0.05);
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.compliance-card:hover {
+    transform: translateY(-0.3125em);
+}
+
+.compliance-card i {
+    color: #6eaf2a;
+    font-size: 1.75rem;
+    margin-bottom: 0.9375em;
+}
+
+.compliance-card h3 {
+    font-size: 1.4rem;
+    color: #192939;
+    margin-bottom: 0.9375em;
+    line-height: 1.4;
+}
+
+.compliance-card p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 4.375em 0;
+    background: linear-gradient(135deg, #003366, #002244);
+    color: white;
+    text-align: center;
+}
+
+.cta-container h3 {
+    color: white;
+    font-size: 1.6rem;
+    max-width: 50em;
+    margin: 0 auto 1.875em;
+    line-height: 1.5;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.25em;
+    margin-top: 1.875em;
+}
+
+/* KYB Section */
+.kyb-container {
+    display: flex;
+    align-items: center;
+    gap: 2.5em;
+    margin-top: 2.5em;
+}
+
+.kyb-content {
+    flex: 1;
+}
+
+.kyb-content h3 {
+    color: #6eaf2a;
+    font-size: 1.8rem;
+    margin-bottom: 1.25em;
+    font-weight: 500;
+}
+
+.kyb-content p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+}
+
+.kyb-cta {
+    margin-top: 1.875em;
+}
+
+.kyb-image {
+    flex: 1;
+}
+
+.kyb-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.75em;
+    box-shadow: 0 0.9375em 1.875em rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .kyb-container {
+        flex-direction: column;
+    }
+    
+    .kyb-content {
+        order: 2;
+    }
+    
+    .kyb-image {
+        order: 1;
+    }
+}
+
+/* Re-KYC Section */
+.rekyc-container {
+    display: flex;
+    align-items: center;
+    gap: 2.5em;
+    margin-top: 2.5em;
+}
+
+.rekyc-content {
+    flex: 1;
+}
+
+.rekyc-content h3 {
+    color: #6eaf2a;
+    font-size: 1.8rem;
+    margin-bottom: 1.25em;
+    font-weight: 500;
+}
+
+.rekyc-content p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+}
+
+.rekyc-cta {
+    margin-top: 1.875em;
+}
+
+.rekyc-image {
+    flex: 1;
+}
+
+.rekyc-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.75em;
+    box-shadow: 0 0.9375em 1.875em rgba(0, 0, 0, 0.1);
+}
+
+.rekyc-card {
+    background-color: white;
+    border-radius: 0.75em;
+    padding: 1.875em;
+    box-shadow: 0 0.625em 1.5625em rgba(0, 0, 0, 0.05);
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.rekyc-card:hover {
+    transform: translateY(-0.3125em);
+}
+
+.rekyc-card i {
+    color: #192939;
+    font-size: 1.5rem;
+    margin-bottom: 0.9375em;
+}
+
+.rekyc-card h3 {
+    font-size: 1.4rem;
+    color: #192939;
+    margin-bottom: 0.9375em;
+    line-height: 1.4;
+}
+
+.rekyc-card p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+    .rekyc-container {
+        flex-direction: column;
+    }
+    
+    .rekyc-content {
+        order: 2;
+    }
+    
+    .rekyc-image {
+        order: 1;
+    }
+    
+    .rekyc-card {
+        margin-bottom: 1.25em;
+    }
+}
+
+/* Industry Solutions Section */
+.industry-solutions {
+    padding: 4.375em 0;
+    background-color: #f8f9fa;
+}
+
+.industry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15.625em, 1fr));
+    gap: 1.875em;
+    margin-top: 2.5em;
+}
+
+.industry-box {
+    background-color: white;
+    border-radius: 0.75em;
+    padding: 1.875em;
+    text-align: center;
+    box-shadow: 0 0.625em 1.5625em rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.industry-box:hover {
+    transform: translateY(-0.3125em);
+}
+
+.industry-box i {
+    color: #192939;
+    font-size: 1.75rem;
+    margin-bottom: 1.25em;
+}
+
+.industry-box h3 {
+    font-size: 1.3rem;
+    color: #192939;
+    margin-bottom: 0.9375em;
+    font-weight: 500;
+}
+
+.industry-box p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+    .industry-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .industry-box {
+        margin-bottom: 1.25em;
+    }
+}
+
+/* Buttons */
+.btn {
+    padding: 0.875em 1.875em;
+    border-radius: 0.3125em;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #6eaf2a;
+    color: white;
+    border: none;
+    box-shadow: 0 0.25em 0.9375em rgba(110, 175, 42, 0.3);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: white;
+    border: 0.125em solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0.25em 0.9375em rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .product-hero-content {
+        max-width: 100%;
+    }
+
+    .hero-cta {
+        justify-content: center;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .industry-boxes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .industry-box {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .cta-section h2 {
+        font-size: 1.8rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-buttons .btn {
+        width: 100%;
+        max-width: 18.75em;
+    }
+}
+
+/* What We Offer Section */
+.overview-section {
+    padding: 4.375em 0;
+    background-color: white;
+}
+
+.kyc-focus-container {
+    display: flex;
+    align-items: center;
+    gap: 2.5em;
+    margin-top: 2.5em;
+}
+
+.kyc-focus-content {
+    flex: 1;
+}
+
+.kyc-focus-content h2 {
+    color: #192939;
+    font-size: 2.2rem;
+    margin-bottom: 0.9375em;
+}
+
+.kyc-focus-content h3 {
+    color: #6eaf2a;
+    font-size: 1.6rem;
+    margin-bottom: 1.25em;
+    font-weight: 500;
+}
+
+.kyc-focus-content p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+}
+
+.kyc-focus-image {
+    flex: 1;
+}
+
+.kyc-focus-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.75em;
+    box-shadow: 0 0.9375em 1.875em rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .kyc-focus-container {
+        flex-direction: column;
+    }
+    
+    .kyc-focus-content {
+        order: 2;
+    }
+    
+    .kyc-focus-image {
+        order: 1;
+    }
+}
+
+/* Smart KYB Section */
+.kyb-card {
+    background-color: white;
+    border-radius: 0.75em;
+    padding: 1.875em;
+    box-shadow: 0 0.625em 1.5625em rgba(0, 0, 0, 0.05);
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.kyb-card:hover {
+    transform: translateY(-0.3125em);
+}
+
+.card-icon {
+    width: 3.125em;
+    height: 3.125em;
+    background-color: #f0f7ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25em;
+}
+
+.card-icon i {
+    color: #192939;
+    font-size: 1.5rem;
+}
+
+.kyb-card h3 {
+    font-size: 1.4rem;
+    color: #192939;
+    margin-bottom: 0.9375em;
+    line-height: 1.4;
+}
+
+.kyb-card p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+    .kyb-card {
+        margin-bottom: 1.25em;
+    }
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 4.375em 0;
+    background-color: white;
+}
+
+.contact-container {
+    display: flex;
+    gap: 2.5em;
+    margin-top: 2.5em;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-info h3 {
+    color: #192939;
+    font-size: 1.8rem;
+    margin-bottom: 1.25em;
+    font-weight: 500;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25em;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.9375em;
+}
+
+.contact-item i {
+    color: #6eaf2a;
+    font-size: 1.25rem;
+}
+
+.contact-item span {
+    font-size: 1rem;
+    color: #333;
+}
+
+.contact-form {
+    flex: 1;
+    background-color: #f8f9fa;
+    border-radius: 0.75em;
+    padding: 1.875em;
+    box-shadow: 0 0.625em 1.5625em rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+    margin-bottom: 1.25em;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0.5em;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75em;
+    border: 0.0625em solid #ddd;
+    border-radius: 0.3125em;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #6eaf2a;
+    outline: none;
+}
+
+.form-group textarea {
+    height: 7.5em;
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: #6eaf2a;
+    color: white;
+    border: none;
+    padding: 0.75em 1.875em;
+    border-radius: 0.3125em;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #5a9a22;
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+    
+    .contact-info {
+        order: 2;
+    }
+    
+    .contact-form {
+        order: 1;
+    }
+}
+
+/* Also update any other paragraph styles in the file */
+.compliance-card p,
+.kyb-content p,
+.rekyc-content p,
+.rekyc-card p,
+.industry-box p,
+.kyc-focus-content p,
+.kyb-card p,
+.contact-info p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+} 

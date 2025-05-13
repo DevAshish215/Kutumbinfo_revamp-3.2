@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KutumbInfo - Empowering businesses with cutting-edge web development, mobile apps, custom software, and API solutions">
+    <meta name="keywords" content="KutumbInfo, web development, mobile apps, software development, API, IT services">
+    <meta name="author" content="KutumbInfo">
+    <meta name="theme-color" content="#192939">
+    <link rel="canonical" href="https://kutumbinfo.com/" />
+    <title>Non-Fintech Products | KutumbInfo</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../Products/products.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../assets/images/favicon2.png" type="image/x-icon" id="favicon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Custom styles for non-fintech page */
+        .fintech-hero-section {
+            position: relative;
+            padding-top: 40px;
+            z-index: 1;
+            overflow: visible;
+        }
+        .fintech-hero-container {
+            padding-top: 35px !important;
+            position: relative;
+            z-index: 2;
+        }
+        .breadcrumb {
+            margin-top: 20px;
+            padding-top: 10px;
+            font-weight: 500;
+            color: #b3b3b3;
+            position: relative;
+            z-index: 3;
+        }
+        /* Improve solution cards */
+        .fintech-solution-card {
+            margin-bottom: 40px;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .fintech-solution-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+        }
+        .solution-image img {
+            max-height: 300px;
+            object-fit: contain;
+        }
+        /* Make solution buttons more prominent */
+        .solution-buttons {
+            margin-top: 25px;
+        }
+        
+        .solution-content .solution-buttons {
+            width: 35%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: flex-start;
+            padding-top: 10px;
+        }
+        
+        .solution-content .solution-buttons a {
+            margin-bottom: 15px;
+            width: 100%;
+            text-align: center;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .solution-cta {
+            background-color: #0078d4;
+            color: white;
+            border: 2px solid #0078d4;
+        }
+        
+        .solution-cta:hover {
+            background-color: #006cc1;
+            border-color: #006cc1;
+        }
+        
+        .solution-details {
+            background-color: transparent;
+            color: #0078d4;
+            border: 2px solid #0078d4;
+            margin-left: 0 !important;
+        }
+        
+        .solution-details:hover {
+            background-color: rgba(0, 120, 212, 0.1);
+        }
+        
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 40px;
+            left: 0;
+            z-index: 0;
+        }
+        
+        /* Horizontal layout for solution content */
+        .solution-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 15px 10px;
+        }
+        
+        .solution-content .solution-icon {
+            width: 8%;
+            margin-right: 2%;
+            font-size: 2.5rem;
+            color: #0078d4;
+            text-align: center;
+        }
+        
+        .solution-content h3 {
+            width: 88%;
+            margin-bottom: 15px;
+            display: inline-block;
+            font-size: 1.8rem;
+            line-height: 1.3;
+            padding-top: 5px;
+        }
+        
+        .solution-content .solution-description {
+            width: 100%;
+            margin-bottom: 20px;
+            clear: both;
+            padding-top: 10px;
+        }
+        
+        .solution-content .solution-features {
+            display: flex;
+            flex-wrap: wrap;
+            width: 60%;
+        }
+        
+        .solution-content .feature-item {
+            width: 48%;
+            margin-right: 2%;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .solution-content .feature-item i {
+            margin-right: 10px;
+            color: #0078d4;
+            font-size: 1.2rem;
+        }
+        
+        .solution-content .feature-item span {
+            line-height: 1.5;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .solution-content .solution-features,
+            .solution-content .solution-buttons {
+                width: 100%;
+            }
+            
+            .solution-content .solution-buttons {
+                margin-top: 20px;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+            
+            .solution-content .solution-buttons a {
+                width: 48%;
+                margin: 0;
+            }
+        }
+        /* Additional responsive adjustments */
+        @media (max-width: 768px) {
+            .solution-content .feature-item {
+                width: 100%;
+                margin-right: 0;
+            }
+            
+            .solution-content .solution-icon {
+                width: 15%;
+            }
+            
+            .solution-content h3 {
+                width: 80%;
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar Section -->
+<nav class="navbar">
+    <div class="logo">
+        <img id="navbar-logo" src="../assets/images/logo kutumbinfo13.png" alt="Kutumbinfo Logo" onclick="handleHomeClick()">
+        <button class="menu-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+
+    <div class="nav-links" id="nav-links">
+        <a href="#" class="no-arrow" onclick="handleWhyKutumbinfoClick()">Why KutumbInfo?</a>
+        
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" onclick="toggleDropdown(this); return false;">Services <span class="dropdown-arrow">v</span></a>
+            <div class="dropdown-content">
+                <div class="dropdown-box" onclick="handleWebDevelopmentClick()">
+                    <img src="../assets/images/icons/web-development-icon.png" alt="Web Development Icon">
+                    <div>
+                        <strong>Web Development</strong>
+                        <p>High-quality web solutions tailored to your business needs.</p>
+                    </div>
+                </div>
+                
+                <div class="dropdown-box" onclick="handleMobileAppDevClick()">
+                    <img src="../assets/images/icons/mobile-app-icon.png" alt="Mobile Application Icon">
+                    <div>
+                        <strong>Mobile Application Development</strong>
+                        <p>Robust mobile apps for iOS and Android platforms.</p>
+                    </div>
+                </div>
+
+                <div class="dropdown-box" onclick="handleCustomSoftDevClick()">
+                    <img src="../assets/images/icons/software-development-icon.png" alt="Custom Software Icon">
+                    <div>
+                        <strong>Custom Software Development</strong>
+                        <p>Tailored software to streamline your operations.</p>
+                    </div>
+                </div>
+
+                <div class="dropdown-box" onclick="handleUIUXDesignClick()">
+                    <img src="../assets/images/icons/ux.png" alt="UI/UX Design Icon">
+                    <div>
+                        <strong>UI/UX Design & Development</strong>
+                        <p>Engaging and intuitive designs for a seamless user experience.</p>
+                    </div>
+                </div>
+
+                <div class="dropdown-box" onclick="handleAPIdevClick()">
+                    <img src="../assets/images/icons/api-development-icon.png" alt="API Development Icon">
+                    <div>
+                        <strong>API Development</strong>
+                        <p>Secure and scalable APIs for your applications.</p>
+                    </div>
+                </div>
+
+                <div class="dropdown-box" onclick="handleMaintainanceSupportClick()">
+                    <img src="../assets/images/icons/maintenance-nav-icon.png" alt="Maintenance & Support Icon">
+                    <div>
+                        <strong>Maintenance & Support</strong>
+                        <p>Reliable support to keep your systems running smoothly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" onclick="toggleDropdown(this); return false;">Expertise <span class="dropdown-arrow">v</span></a>
+            <div class="dropdown-content">
+                <div class="dropdown-box" onclick="goToAngular()">
+                    <img src="../assets/images/icons/angularjs.png" alt="Angular Icon">
+                    <div>
+                        <strong>Angular Development</strong>
+                        <p>Dynamic web applications using Angular framework.</p>
+                    </div>
+                </div>
+                <div class="dropdown-box" onclick="goToReact()">
+                    <img src="../assets/images/icons/react.png" alt="React Icon">
+                    <div>
+                        <strong>React Development</strong>
+                        <p>High-performance web apps using React.</p>
+                    </div>
+                </div>
+                <div class="dropdown-box" onclick="goToVuejs()">
+                    <img src="../assets/images/icons/vuejs.png" alt="Vue.js Icon">
+                    <div>
+                        <strong>Vue.js Development</strong>
+                        <p>Versatile and lightweight web apps using Vue.js.</p>
+                    </div>
+                </div>
+                <div class="dropdown-box" onclick="goToWordpress()">
+                    <img src="../assets/images/icons/wordpress-logo.png" alt="WordPress Icon">
+                    <div>
+                        <strong>WordPress Development</strong>
+                        <p>Customizable websites built on WordPress.</p>
+                    </div>
+                </div>
+                <div class="dropdown-box" onclick="goToFlutter()">
+                    <img src="../assets/images/icons/flutter-100.png" alt="Flutter Icon">
+                    <div>
+                        <strong>Flutter Development</strong>
+                        <p>Cross-platform mobile apps with Flutter.</p>
+                    </div>
+                </div>
+                <div class="dropdown-box" onclick="goToJava()">
+                    <img src="../assets/images/icons/java.png" alt="Java Icon">
+                    <div>
+                        <strong>Java Development</strong>
+                        <p>Enterprise-grade applications using Java.</p>
+                    </div>
+                </div>
+                <div class="dropdown-box" onclick="goToNodejs()">
+                    <img src="../assets/images/icons/nodejs.png" alt="Node.js Icon">
+                    <div>
+                        <strong>Node.js Development</strong>
+                        <p>Scalable backend solutions using Node.js.</p>
+                    </div>
+                </div>
+                <div class="dropdown-box" onclick="goToPhp()">
+                    <img src="../assets/images/icons/php.png" alt="PHP Icon">
+                    <div>
+                        <strong>PHP Development</strong>
+                        <p>Dynamic websites and applications using PHP.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" onclick="toggleDropdown(this); return false;">Products <span class="dropdown-arrow">v</span></a>
+            <div class="dropdown-content">
+                <div class="dropdown-box dropdown-box-width" onclick="goToNonFintech()">
+                    <img src="../assets/images/icons/non-fintech.png" alt="Non-Fintech Products Icon">
+                    <div>
+                        <strong>Non-Fintech Products:</strong>
+                        <ul>
+                            <li>Rental Solution (PCT)</li>
+                            <li>School Management</li>
+                            <li>Nagar Parishad Management Software</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdown-box dropdown-box-width" onclick="goToFintech()">
+                    <img src="../assets/images/icons/fintech.png" alt="Fintech Products Icon">
+                    <div>
+                        <strong>Fintech Products:</strong>
+                        <ul>
+                            <li>KYCPLUS</li>
+                            <li>Information System WPS</li>
+                            <li>RPACPC</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" onclick="toggleDropdown(this); return false;">Associate Venture <span class="dropdown-arrow">v</span></a>
+            <div class="dropdown-content">
+                <div class="dropdown-box hover-block" onclick="window.open('https://azlogics.com/', '_blank');">
+                    <img src="../assets/images/azlogic.png" alt="Azlogics Icon">
+                    <div>
+                        <strong>Azlogics</strong>
+                        <p>Technology solutions and services.</p>
+                    </div>
+                </div>
+                <div class="dropdown-box hover-block" onclick="window.open('https://www.webakruti.com/', '_blank');">
+                    <img src="../assets/images/webakrutilogo.svg" alt="Webakruti Icon">
+                    <div>
+                        <strong>Webakruti</strong>
+                        <p>Digital innovation and software development.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="no-arrow" onclick="handleWorkWithUsClick()">Work with us</a>
+    </div>
+</nav>
+
+    <main class="main-container">
+        <!-- Hero Section -->
+        <section class="fintech-hero-section reveal-section">
+            <div id="particles-js"></div>
+            <div class="fintech-hero-container" style="padding-top: 30px;">
+                <div class="fintech-hero-content reveal-item">
+                    <div class="breadcrumb" style="margin-top: 20px; padding-top: 10px;">Home > Products > Non-Fintech Solutions</div>
+                    <h1>Advanced <span class="text-accent">Non-Fintech</span> Solutions</h1>
+                    <p>Innovative digital platforms to empower educational institutions, municipal governance, and property management with streamlined operations and automation.</p>
+                </div>
+                <div class="fintech-hero-image reveal-item">
+                    <div class="inner-ring"></div>
+                    <img src="../assets/images/local-icon.png" alt="Smart Non-Fintech Solutions">
+                </div>
+            </div>
+            <div class="particles-container"></div>
+        </section>
+
+
+        <!-- Products Section -->
+        <section class="services-section reveal-section active">
+            <div class="section-header reveal-item active">
+                <h2>Our Solutions</h2>
+                <p>Digitally transforming institutions for efficient and transparent administration</p>
+            </div>
+
+            <div class="fintech-solutions-container">
+                <!-- School Management System -->
+                <div class="fintech-solution-card reveal-item">
+                    <div class="solution-image">
+                        <img src="../assets/images/product_img/school management.png" alt="School Management System" class="solution-img">
+                    </div>
+                    <div class="solution-content">
+                        <div class="solution-icon">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <h3>School Management Information System</h3>
+                        <p class="solution-description">SMIS is a comprehensive platform designed to eliminate paperwork, reduce errors, and enhance administrative efficiency in schools. It offers modules for admissions, examinations, attendance, communication, and more.</p>
+                        <div class="solution-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>End-to-end school operations management</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Secure and centralized dashboard</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Streamlined communication with parents, staff, and students</span>
+                            </div>
+                        </div>
+                        <div class="solution-buttons">
+                            <a href="../work_with_us.html#contact-form" class="solution-cta">Request Demo <i class="fas fa-arrow-right"></i></a>
+                            <a href="#" class="solution-details" target="_blank">View Details <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rental Solution Product -->
+                <div class="fintech-solution-card reveal-item">
+                    <div class="solution-image">
+                        <img src="../assets/images/product_img/rental-solution.png" alt="Rental Solution Software" class="solution-img">
+                    </div>
+                    <div class="solution-content">
+                        <div class="solution-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3>Rental Solution (PCT)</h3>
+                        <p class="solution-description">A comprehensive property and rental management system designed to simplify property listings, tenant management, rent collection, and maintenance requests. Streamline your property business with automated workflows and insightful reporting.</p>
+                        <div class="solution-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Complete property lifecycle management</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Automated rent collection and reminders</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Maintenance request tracking and resolution</span>
+                            </div>
+                        </div>
+                        <div class="solution-buttons">
+                            <a href="../work_with_us.html#contact-form" class="solution-cta">Request Demo <i class="fas fa-arrow-right"></i></a>
+                            <a href="#" class="solution-details" target="_blank">View Details <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nagar Parishad Software -->
+                <div class="fintech-solution-card reverse-layout reveal-item">
+                    <div class="solution-image">
+                        <img src="../assets/images/product_img/nagar-parishad.png" alt="Nagar Parishad Management Software" class="solution-img">
+                    </div>
+                    <div class="solution-content">
+                        <div class="solution-icon">
+                            <i class="fas fa-city"></i>
+                        </div>
+                        <h3>Nagar Parishad Management Software</h3>
+                        <p class="solution-description">An essential solution for urban local bodies, the Nagar Parishad software helps automate workflows, manage data securely, and enhance citizen services. Trusted by cities and municipalities worldwide.</p>
+                        <div class="solution-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Automated internal processes for municipalities</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Supports taxation, citizen grievance, sanitation & more</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Transparent reporting and data management</span>
+                            </div>
+                        </div>
+                        <div class="solution-buttons">
+                            <a href="../work_with_us.html#contact-form" class="solution-cta">Request Demo <i class="fas fa-arrow-right"></i></a>
+                            <a href="#" class="solution-details" target="_blank">View Details <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section reveal-section">
+            <div class="cta-container reveal-item">
+                <h3>Digital Transformation for Municipal & Educational Sectors - Our solutions reduce operational costs by 40% while improving transparency and service delivery.</h3>
+                <div class="cta-buttons">
+                    <a href="../work_with_us.html#contact-form" class="cta-button">Request Demo</a>
+                    <a href="../work_with_us.html#contact-form" class="secondary-button">Discover Our Solutions</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="about-us">
+        <div class="wrapper">
+            <div class="container">
+                <!-- Quick Links Row -->
+                <div class="quick-links-container">
+                    <!-- Support -->
+                    <div class="about-column support">
+                        <h3>Support</h3>
+                        <ul>
+                            <li><a href="javascript:void(0);">365 Days</a></li>
+                            <li><a href="javascript:void(0);">8760 Hours</a></li>
+                            <li><a href="javascript:void(0);">525600 Minutes</a></li>
+                            <li><a href="javascript:void(0);">31536000 Seconds</a></li>
+                        </ul>
+                    </div>
+                    <!-- Location -->
+                    <div class="about-column location">
+                        <h3>Location</h3>
+                        <ul>
+                            <li><a href="javascript:void(0);">Plot-1, IT Park Rd, Nagpur MH-440022</a></li>
+                            <li><a href="tel:+918956118607">+91-895 611 8607</a></li>
+                            <li><a href="mailto:connect@kutumbinfo.com">connect@kutumbinfo.com</a></li>
+                            <li><a href="mailto:kkutumbinfo@gmail.com">kkutumbinfo@gmail.com</a></li>
+                        </ul>
+                    </div>
+                    <!-- Explore Us -->
+                    <div class="about-column">
+                        <h3>Explore Us</h3>
+                        <ul>
+                            <li><a href="../Services/web_dev.html" target="_blank">Web Development Portfolio</a></li>
+                            <li><a href="../Services/mob_app.html" target="_blank">Mobile Application Portfolio</a></li>
+                            <li><a href="../work_with_us.html" target="_blank">About Us</a></li>
+                            <li><a href="../work_with_us.html#contact-form" target="_blank">Careers</a></li>
+                            <li><a href="https://azlogics.com/" target="_blank">Associate Venture</a></li>
+                        </ul>
+                    </div>
+                    <!-- Products -->
+                    <div class="about-column">
+                        <h3>Products</h3>
+                        <ul>
+                            <li><a href="KYCPLUS.html" target="_blank">KYC Plus</a></li>
+                            <li><a href="RPACPC.html" target="_blank">RPACPC</a></li>
+                            <li><a href="AZAPI.html" target="_blank">AZAPI</a></li>
+                            <li><a href="wpx_nexus.html" target="_blank">WPS</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Row with Logo, Links, and Social Media -->
+            <div class="footer-row">
+                <!-- Footer Logo -->
+                <div class="footer-logo">
+                    <img src="../assets/images/logo kutumbinfo13.png" alt="Kutumbinfo Logo">
+                </div>
+                
+                <!-- Footer Note with Links and Copyright -->
+                <div class="footer-note">
+                    <!-- Footer Links -->
+                    <div class="footer-links">
+                        <ul>
+                            <li><a href="../terms_and_conditions.html#terms">Terms and Conditions</a></li>
+                            <li><a href="../terms_and_conditions.html#privacy">Privacy Policy</a></li>
+                            <li><a href="../terms_and_conditions.html#refunds">Refunds</a></li>
+                            <li><a href="../sitemap.html">Sitemap</a></li>
+                        </ul>
+                    </div>
+                    <p class="copyright">All Rights Reserved © Copyright 2025 | KuTuMbinfo Pvt Ltd</p>
+                </div>
+                
+                <!-- Stay Connected -->
+                <div class="stay-connected">
+                    <h3>Stay Connected</h3>
+                    <div class="social-icons">
+                        <a href="#"><img src="../assets/images/social_icon/facebook.png" alt="Facebook"></a>
+                        <a href="#"><img src="../assets/images/social_icon/whatsapp.png" alt="WhatsApp"></a>
+                        <a href="#"><img src="../assets/images/social_icon/instagram.png" alt="Instagram"></a>
+                        <a href="#"><img src="../assets/images/social_icon/twitter.png" alt="X (Twitter)"></a>
+                        <a href="#"><img src="../assets/images/social_icon/linkedin.png" alt="LinkedIn"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../assets/js/main.js"></script>
+    <script src="products.js"></script>
+</body>
+</html>
