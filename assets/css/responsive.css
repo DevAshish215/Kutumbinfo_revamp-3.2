@@ -3047,3 +3047,265 @@
         font-size: 0.55rem;
     }
 }
+
+/* ====== PRODUCT PAGE RESPONSIVE STYLES ====== */
+/* Responsive styles moved from new_products.css */
+
+@media (max-width: 1200px) {
+    .product-hero-container {
+        flex-direction: column;
+        padding: 0 1.25rem;
+    }
+    
+    .product-hero-content, .product-hero-image {
+        max-width: 100%;
+        padding-left: 0;
+        margin-left: 0;
+        text-align: center;
+    }
+    
+    .prod-hero-buttons {
+        justify-content: center;
+    }
+    
+    .inner-ring, .outer-ring {
+        display: none;
+    }
+    
+    .fintech-solution-card {
+        flex-direction: column;
+    }
+    
+    .solution-image {
+        max-width: 100%;
+    }
+    
+    .reverse-layout {
+        flex-direction: column;
+    }
+    
+    .reverse-layout .solution-content::before {
+        left: auto;
+        right: -2.5em;
+    }
+}
+
+@media (max-width: 992px) {
+    .fintech-hero-container, .product-hero-container {
+        flex-direction: column;
+        padding: 0 1.25rem;
+    }
+    
+    .fintech-hero-content, .product-hero-content {
+        max-width: 100%;
+        padding-left: 0;
+        margin-left: 0;
+        text-align: center;
+    }
+    
+    .prod-hero-buttons {
+        justify-content: center;
+    }
+    
+    .inner-ring, .outer-ring {
+        display: none;
+    }
+    
+    .fintech-solution-card {
+        flex-direction: column;
+    }
+    
+    .solution-image {
+        max-width: 100%;
+    }
+    
+    .reverse-layout {
+        flex-direction: column;
+    }
+    
+    .reverse-layout .solution-content::before {
+        left: auto;
+        right: -2.5em;
+    }
+}
+
+@media (max-width: 768px) {
+    .fintech-hero-section, .product-hero-section {
+        padding: 3.125rem 0;
+    }
+    
+    .fintech-hero-content h1, .product-hero-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .solution-content {
+        padding: 20px;
+    }
+    
+    .solution-content h3 {
+        font-size: 1.3rem;
+    }
+    
+    .solution-description {
+        font-size: 0.9rem;
+    }
+    
+    .prod-section-header {
+        margin-bottom: 2.5rem;
+    }
+    
+    /* KYC+ Specific Responsive */
+    .advantages-container, .kyb-container, .rekyc-container, .kyc-focus-container {
+        flex-direction: column;
+    }
+    
+    .advantages-card, .advantages-image, .kyb-content, .kyb-image, 
+    .rekyc-content, .rekyc-image, .kyc-focus-content, .kyc-focus-image {
+        width: 100%;
+    }
+    
+    .rekyc-card, .kyb-card, .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .industry-boxes {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .industry-box {
+        min-width: calc(50% - 1.25em);
+    }
+    
+    .prod-cta-section h2 {
+        font-size: 1.8rem;
+    }
+    
+    .prod-cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .prod-cta-buttons .btn {
+        width: 100%;
+        margin-bottom: 0.625em;
+    }
+}
+
+@media (max-width: 576px) {
+    .fintech-hero-content h1, .product-hero-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .fintech-hero-content p, .product-hero-content p {
+        font-size: 1rem;
+    }
+    
+    .fintech-solutions-container {
+        padding: 0 10px;
+    }
+    
+    .solution-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .solution-cta, .solution-details {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .solution-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .prod-cta-buttons {
+        flex-direction: column;
+    }
+    
+    /* KYC+ Specific Responsive */
+    .industry-box {
+        min-width: 100%;
+    }
+}
+
+/* WPS and Solution Specific Responsive Styles */
+@media (max-width: 992px) {
+    .wps-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .solution-container {
+        flex-direction: column;
+    }
+    
+    .solution-content, .solution-image {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .solution-section {
+        padding: 30px 0;
+    }
+    
+    .wps-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .wps-card {
+        padding: 15px;
+    }
+    
+    .wps-card-icon {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 15px;
+    }
+    
+    .wps-card h3 {
+        font-size: 16px;
+    }
+    
+    .wps-card p {
+        font-size: 13px;
+    }
+    
+    .solution-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .solution-content, .solution-image {
+        width: 100%;
+    }
+    
+    .feature-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .feature-image {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .wps-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .solution-feature i {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+    
+    .solution-feature-content h4 {
+        font-size: 15px;
+    }
+}

@@ -657,71 +657,344 @@ function setActiveNavbarItem() {
   }, 1000); // Delay to ensure navbar is loaded
 }
 
-// ----- Main Initialization -----
+// ----- Product Page Specific Functions -----
 
-document.addEventListener("DOMContentLoaded", () => {
-  // Check if we're on a services page
-  const isServicesPage = window.location.pathname.includes('/Services/');
+/**
+ * Initialize fintech specific features
+ */
+function initFintechFeatures() {
+    // Create particles for decorative effect
+    createProductParticles();
+    
+    // Generate particles for hero section background
+    const heroSection = document.querySelector('.fintech-hero-section') || document.querySelector('.product-hero-section');
+    if (heroSection) {
+        const particlesContainer = heroSection.querySelector('.particles-container');
+        if (particlesContainer) {
+            for (let i = 0; i < 20; i++) {
+                const size = Math.random() * 10 + 5;
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.opacity = Math.random() * 0.5 + 0.1;
+                particle.style.animationDuration = (Math.random() * 15 + 10) + 's';
+                particle.style.animationDelay = (Math.random() * 5) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+    }
+    
+    // Initialize tabs functionality
+    initTabs();
+    
+    // Initialize slider
+    initSlider();
+    
+    // Initialize forms
+    initForms();
+}
+
+/**
+ * Initialize product particles using ParticlesJS library
+ */
+function createProductParticles() {
+    if (typeof particlesJS !== 'undefined' && document.getElementById('particles-js')) {
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: '#39e29d' },
+                shape: {
+                    type: 'circle',
+                    stroke: { width: 0, color: '#000000' },
+                    polygon: { nb_sides: 5 }
+                },
+                opacity: {
+                    value: 0.5,
+                    random: false,
+                    anim: { enable: false }
+                },
+                size: {
+                    value: 3,
+                    random: true,
+                    anim: { enable: false }
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: '#39e29d',
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 3,
+                    direction: 'none',
+                    random: false,
+                    straight: false,
+                    out_mode: 'out',
+                    bounce: false,
+                    attract: { enable: false }
+                }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: {
+                    onhover: { enable: true, mode: 'repulse' },
+                    onclick: { enable: true, mode: 'push' },
+                    resize: true
+                },
+                modes: {
+                    grab: { distance: 400, line_linked: { opacity: 1 } },
+                    bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 },
+                    repulse: { distance: 200, duration: 0.4 },
+                    push: { particles_nb: 4 },
+                    remove: { particles_nb: 2 }
+                }
+            },
+            retina_detect: true
+        });
+    }
+}
+
+/**
+ * Switch between tabs in the products page
+ */
+function switchTab(tabName) {
+    const tabs = document.querySelectorAll('.product-tab');
+    const buttons = document.querySelectorAll('.tab-button');
+    
+    tabs.forEach(tab => {
+        tab.classList.remove('active');
+    });
+    
+    buttons.forEach(button => {
+        button.classList.remove('active');
+    });
+    
+    document.getElementById(tabName).classList.add('active');
+    document.getElementById(tabName + '-tab').classList.add('active');
+}
+
+/**
+ * Initialize product tabs
+ */
+function initTabs() {
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const productTabs = document.querySelectorAll('.product-tab');
+    
+    if (tabButtons.length === 0) return;
+    
+    tabButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove active class from all buttons and tabs
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            productTabs.forEach(tab => tab.classList.remove('active'));
+            
+            // Add active class to clicked button
+            this.classList.add('active');
+            
+            // Show the corresponding tab
+            const tabId = this.getAttribute('data-tab');
+            const targetTab = document.getElementById(tabId);
+            if (targetTab) {
+                targetTab.classList.add('active');
+            }
+        });
+    });
+}
+
+/**
+ * Initialize case study slider
+ */
+function initSlider() {
+    const sliderDots = document.querySelectorAll('.slider-dot');
+    const sliderSlides = document.querySelectorAll('.case-study-slide');
+    const prevArrow = document.querySelector('.prev-arrow');
+    const nextArrow = document.querySelector('.next-arrow');
+    
+    if (sliderDots.length === 0 || sliderSlides.length === 0) return;
+    
+    let currentSlide = 0;
+    
+    function showSlide(index) {
+        // Hide all slides
+        sliderSlides.forEach(slide => slide.classList.remove('active'));
+        // Remove active class from all dots
+        sliderDots.forEach(dot => dot.classList.remove('active'));
+        
+        // Show the selected slide
+        sliderSlides[index].classList.add('active');
+        // Add active class to the corresponding dot
+        sliderDots[index].classList.add('active');
+        
+        currentSlide = index;
+    }
+    
+    // Dot click event
+    sliderDots.forEach((dot, index) => {
+        dot.addEventListener('click', () => showSlide(index));
+    });
+    
+    // Previous arrow click event
+    if (prevArrow) {
+        prevArrow.addEventListener('click', () => {
+            let newIndex = currentSlide - 1;
+            if (newIndex < 0) newIndex = sliderSlides.length - 1;
+            showSlide(newIndex);
+        });
+    }
+    
+    // Next arrow click event
+    if (nextArrow) {
+        nextArrow.addEventListener('click', () => {
+            let newIndex = currentSlide + 1;
+            if (newIndex >= sliderSlides.length) newIndex = 0;
+            showSlide(newIndex);
+        });
+    }
+    
+    // Auto-rotate slides every 5 seconds
+    setInterval(() => {
+        let newIndex = currentSlide + 1;
+        if (newIndex >= sliderSlides.length) newIndex = 0;
+        showSlide(newIndex);
+    }, 5000);
+}
+
+/**
+ * Initialize form handling for product pages
+ */
+function initForms() {
+    const demoForm = document.getElementById('demo-form');
+    
+    if (demoForm) {
+        demoForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Basic validation
+            const nameInput = document.getElementById('demo-name');
+            const emailInput = document.getElementById('demo-email');
+            const companyInput = document.getElementById('demo-company');
+            
+            let isValid = true;
+            
+            if (!nameInput.value.trim()) {
+                isValid = false;
+                nameInput.classList.add('error');
+            } else {
+                nameInput.classList.remove('error');
+            }
+            
+            if (!emailInput.value.trim() || !isValidEmail(emailInput.value)) {
+                isValid = false;
+                emailInput.classList.add('error');
+            } else {
+                emailInput.classList.remove('error');
+            }
+            
+            if (!companyInput.value.trim()) {
+                isValid = false;
+                companyInput.classList.add('error');
+            } else {
+                companyInput.classList.remove('error');
+            }
+            
+            if (isValid) {
+                // If form is valid, show a success message for demonstration
+                const formContainer = demoForm.parentElement;
+                formContainer.innerHTML = '<div class="success-message"><h3>Thank you for your interest!</h3><p>We\'ve received your request and will get back to you shortly.</p></div>';
+            }
+        });
+    }
+    
+    // Helper function to validate email format
+    function isValidEmail(email) {
+        const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+    }
+}
+
+/**
+ * Set up contact form links
+ */
+function setupContactFormLinks() {
+    const contactLinks = document.querySelectorAll('a[href*="#contact"]');
+    
+    contactLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href').split('#')[1];
+            const targetSection = document.getElementById(targetId);
+            
+            if (targetSection) {
+                // Scroll to the target section
+                const offset = 100; // Adjust this value as needed
+                const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset - offset;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+}
+
+// ----- Main Initialization -----
+document.addEventListener('DOMContentLoaded', function() {
+  // Initialize the components
+  initializeNavbar();
   
-  if (isServicesPage && document.getElementById('navbar-placeholder')) {
-    // For services pages with placeholder elements, load navbar and footer
-    loadNavbarAndFooter();
-    
-    // Initialize scroll animations after a short delay to ensure all elements are loaded
-    setTimeout(() => {
-      initScrollAnimations();
-      // Create particles for services hero section after a short delay
-      setTimeout(createParticles, 100);
-    }, 500);
-    
-    // Initialize talk to team buttons
-    initializeTalkToTeamButtons();
-    
-    // Initialize smooth scrolling
-    initializeSmoothScrolling();
-    
-    // Set active navbar item
-    setActiveNavbarItem();
-  } else {
-    // For main site pages
-    
-    // Initialize navbar (this comes first in page load order)
-    initializeNavbar();
-    
-    // Create particles for hero section after a short delay
-    setTimeout(createParticles, 100);
-    
-    // Initialize scroll animations (affects sections as user scrolls)
-    initScrollAnimations();
-    
-    // Initialize counters (typically appear in the middle of the page)
-    initializeCounters();
-    
-    // Initialize testimonial slider if function exists (typically near bottom)
-    if (typeof initializeTestimonialSlider === 'function') {
-      initializeTestimonialSlider();
-    }
-    
-    // Handle hash fragments for direct section navigation
-    if (window.location.hash === '#contact-form') {
-      handleContactFormNavigation();
-    } else if (window.location.hash && typeof handleHashNavigation === 'function') {
-      handleHashNavigation();
-    }
-    
-    // Initialize contact form handling
+  // Add scroll event listener for navbar
+  window.addEventListener('scroll', handleNavbarScroll);
+  window.addEventListener('scroll', initScrollAnimations);
+  
+  // Initialize scroll animations
+  initScrollAnimations();
+  
+  // Initialize counters for achievements section
+  initializeCounters();
+  
+  // Initialize the contact form if present
     initializeContactForm();
     
-    // Enhance Work With Us section
+  // Initialize work with us specific functionalities
     enhanceWorkWithUsSection();
     
-    // Initialize talk to team buttons
+  // Set up talk to team buttons
     initializeTalkToTeamButtons();
     
     // Initialize smooth scrolling
     initializeSmoothScrolling();
     
-    // Set active navbar item
+  // Set active navbar item based on current page
     setActiveNavbarItem();
+  
+  // Create particles effect for home page
+  if (document.querySelector('.hero-section')) {
+    createParticles();
+  }
+  
+  // Add product page functionality
+  setupContactFormLinks();
+  
+  // Initialize fintech specific features if on a fintech/product page
+  if (document.querySelector('.fintech-hero-section') || document.querySelector('.product-hero-section')) {
+      setTimeout(initFintechFeatures, 500);
+  }
+  
+  // Initialize tabs functionality for product/service tabs
+  const tabButtons = document.querySelectorAll('.tab-button');
+  if (tabButtons.length > 0) {
+      tabButtons.forEach(button => {
+          button.addEventListener('click', function() {
+              const tabName = this.getAttribute('id').replace('-tab', '');
+              switchTab(tabName);
+          });
+      });
   }
 });

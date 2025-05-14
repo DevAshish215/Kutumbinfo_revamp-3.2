@@ -3,206 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="KutumbInfo - Empowering businesses with cutting-edge web development, mobile apps, custom software, and API solutions">
-    <meta name="keywords" content="KutumbInfo, web development, mobile apps, software development, API, IT services">
+    <meta name="description" content="Non-Fintech Products - Innovative solutions for various industries by KutumbInfo">
+    <meta name="keywords" content="non-fintech products, KutumbInfo, software solutions, rental solutions, school management">
     <meta name="author" content="KutumbInfo">
     <meta name="theme-color" content="#192939">
-    <link rel="canonical" href="https://kutumbinfo.com/" />
+    <link rel="canonical" href="https://kutumbinfo.com/Products/non_fintech.html" />
     <title>Non-Fintech Products | KutumbInfo</title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/responsive.css">
-    <link rel="stylesheet" href="../Products/products.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="../assets/images/favicon2.png" type="image/x-icon" id="favicon">
+    <!-- Animation library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <style>
-        /* Custom styles for non-fintech page */
-        .fintech-hero-section {
-            position: relative;
-            padding-top: 40px;
-            z-index: 1;
-            overflow: visible;
-        }
-        .fintech-hero-container {
-            padding-top: 35px !important;
-            position: relative;
-            z-index: 2;
-        }
-        .breadcrumb {
-            margin-top: 20px;
-            padding-top: 10px;
-            font-weight: 500;
-            color: #b3b3b3;
-            position: relative;
-            z-index: 3;
-        }
-        /* Improve solution cards */
-        .fintech-solution-card {
-            margin-bottom: 40px;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-        }
-        
-        .fintech-solution-card:hover {
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-            transform: translateY(-5px);
-        }
-        .solution-image img {
-            max-height: 300px;
-            object-fit: contain;
-        }
-        /* Make solution buttons more prominent */
-        .solution-buttons {
-            margin-top: 25px;
-        }
-        
-        .solution-content .solution-buttons {
-            width: 35%;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            justify-content: flex-start;
-            padding-top: 10px;
-        }
-        
-        .solution-content .solution-buttons a {
-            margin-bottom: 15px;
-            width: 100%;
-            text-align: center;
-            padding: 12px 20px;
-            border-radius: 5px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-        
-        .solution-cta {
-            background-color: #0078d4;
-            color: white;
-            border: 2px solid #0078d4;
-        }
-        
-        .solution-cta:hover {
-            background-color: #006cc1;
-            border-color: #006cc1;
-        }
-        
-        .solution-details {
-            background-color: transparent;
-            color: #0078d4;
-            border: 2px solid #0078d4;
-            margin-left: 0 !important;
-        }
-        
-        .solution-details:hover {
-            background-color: rgba(0, 120, 212, 0.1);
-        }
-        
-        #particles-js {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 40px;
-            left: 0;
-            z-index: 0;
-        }
-        
-        /* Horizontal layout for solution content */
-        .solution-content {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: flex-start;
-            justify-content: space-between;
-            padding: 15px 10px;
-        }
-        
-        .solution-content .solution-icon {
-            width: 8%;
-            margin-right: 2%;
-            font-size: 2.5rem;
-            color: #0078d4;
-            text-align: center;
-        }
-        
-        .solution-content h3 {
-            width: 88%;
-            margin-bottom: 15px;
-            display: inline-block;
-            font-size: 1.8rem;
-            line-height: 1.3;
-            padding-top: 5px;
-        }
-        
-        .solution-content .solution-description {
-            width: 100%;
-            margin-bottom: 20px;
-            clear: both;
-            padding-top: 10px;
-        }
-        
-        .solution-content .solution-features {
-            display: flex;
-            flex-wrap: wrap;
-            width: 60%;
-        }
-        
-        .solution-content .feature-item {
-            width: 48%;
-            margin-right: 2%;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-        }
-        
-        .solution-content .feature-item i {
-            margin-right: 10px;
-            color: #0078d4;
-            font-size: 1.2rem;
-        }
-        
-        .solution-content .feature-item span {
-            line-height: 1.5;
-        }
-        
-        /* Responsive adjustments */
-        @media (max-width: 992px) {
-            .solution-content .solution-features,
-            .solution-content .solution-buttons {
-                width: 100%;
-            }
-            
-            .solution-content .solution-buttons {
-                margin-top: 20px;
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-            }
-            
-            .solution-content .solution-buttons a {
-                width: 48%;
-                margin: 0;
-            }
-        }
-        /* Additional responsive adjustments */
-        @media (max-width: 768px) {
-            .solution-content .feature-item {
-                width: 100%;
-                margin-right: 0;
-            }
-            
-            .solution-content .solution-icon {
-                width: 15%;
-            }
-            
-            .solution-content h3 {
-                width: 80%;
-                font-size: 1.6rem;
-            }
-        }
-    </style>
 </head>
+
 <body>
     <!-- Navbar Section -->
 <nav class="navbar">
@@ -216,7 +31,7 @@
     </div>
 
     <div class="nav-links" id="nav-links">
-        <a href="#" class="no-arrow" onclick="handleWhyKutumbinfoClick()">Why KutumbInfo?</a>
+        <a href="../why_kutumbinfo.html" class="no-arrow">Why KutumbInfo?</a>
         
         <div class="dropdown">
             <a href="#" class="dropdown-toggle" onclick="toggleDropdown(this); return false;">Services <span class="dropdown-arrow">v</span></a>
@@ -378,32 +193,37 @@
                 </div>
             </div>
         </div>
-        <a href="#" class="no-arrow" onclick="handleWorkWithUsClick()">Work with us</a>
+        <a href="../work_with_us.html" class="no-arrow">Work with us</a>
     </div>
 </nav>
 
-    <main class="main-container">
+<div id="main-content">
+    <main class="prod-main-container">
         <!-- Hero Section -->
-        <section class="fintech-hero-section reveal-section">
+        <section class="hero-section bg-dark-blue reveal-section" role="banner">
             <div id="particles-js"></div>
-            <div class="fintech-hero-container" style="padding-top: 30px;">
-                <div class="fintech-hero-content reveal-item">
-                    <div class="breadcrumb" style="margin-top: 20px; padding-top: 10px;">Home > Products > Non-Fintech Solutions</div>
-                    <h1>Advanced <span class="text-accent">Non-Fintech</span> Solutions</h1>
-                    <p>Innovative digital platforms to empower educational institutions, municipal governance, and property management with streamlined operations and automation.</p>
+            <div class="hero-container">
+                <div class="hero-content reveal-item">
+                    <div class="breadcrumb">Home > Products > Non-Fintech Solutions</div>
+                    <h1>Advanced <span class="prod-text-accent">Non-Fintech</span> Solutions</h1>
+                    <p>Innovative digital platforms to empower educational institutions and urban governance with streamlined operations and automation.</p>
                 </div>
-                <div class="fintech-hero-image reveal-item">
-                    <div class="inner-ring"></div>
-                    <img src="../assets/images/local-icon.png" alt="Smart Non-Fintech Solutions">
+                <div class="hero-visual reveal-item">
+                    <div class="expertise-inner-ring" style="z-index: 1;"></div>
+                    <div style="position: relative; z-index: 2;">
+                        <img src="../assets/images/product_img/non_fintech_image.png" alt="Local Icon">
+                        
+                    </div>
                 </div>
             </div>
-            <div class="particles-container"></div>
+            <!-- Particles container -->
+            <div class="particles-container" aria-hidden="true"></div>
         </section>
 
 
         <!-- Products Section -->
         <section class="services-section reveal-section active">
-            <div class="section-header reveal-item active">
+            <div class="prod-section-header reveal-item active">
                 <h2>Our Solutions</h2>
                 <p>Digitally transforming institutions for efficient and transparent administration</p>
             </div>
@@ -436,39 +256,7 @@
                         </div>
                         <div class="solution-buttons">
                             <a href="../work_with_us.html#contact-form" class="solution-cta">Request Demo <i class="fas fa-arrow-right"></i></a>
-                            <a href="#" class="solution-details" target="_blank">View Details <i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Rental Solution Product -->
-                <div class="fintech-solution-card reveal-item">
-                    <div class="solution-image">
-                        <img src="../assets/images/product_img/rental-solution.png" alt="Rental Solution Software" class="solution-img">
-                    </div>
-                    <div class="solution-content">
-                        <div class="solution-icon">
-                            <i class="fas fa-home"></i>
-                        </div>
-                        <h3>Rental Solution (PCT)</h3>
-                        <p class="solution-description">A comprehensive property and rental management system designed to simplify property listings, tenant management, rent collection, and maintenance requests. Streamline your property business with automated workflows and insightful reporting.</p>
-                        <div class="solution-features">
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Complete property lifecycle management</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Automated rent collection and reminders</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Maintenance request tracking and resolution</span>
-                            </div>
-                        </div>
-                        <div class="solution-buttons">
-                            <a href="../work_with_us.html#contact-form" class="solution-cta">Request Demo <i class="fas fa-arrow-right"></i></a>
-                            <a href="#" class="solution-details" target="_blank">View Details <i class="fas fa-external-link-alt"></i></a>
+                            
                         </div>
                     </div>
                 </div>
@@ -500,110 +288,104 @@
                         </div>
                         <div class="solution-buttons">
                             <a href="../work_with_us.html#contact-form" class="solution-cta">Request Demo <i class="fas fa-arrow-right"></i></a>
-                            <a href="#" class="solution-details" target="_blank">View Details <i class="fas fa-external-link-alt"></i></a>
+                            
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- CTA Section -->
-        <section class="cta-section reveal-section">
-            <div class="cta-container reveal-item">
-                <h3>Digital Transformation for Municipal & Educational Sectors - Our solutions reduce operational costs by 40% while improving transparency and service delivery.</h3>
-                <div class="cta-buttons">
-                    <a href="../work_with_us.html#contact-form" class="cta-button">Request Demo</a>
-                    <a href="../work_with_us.html#contact-form" class="secondary-button">Discover Our Solutions</a>
-                </div>
-            </div>
-        </section>
     </main>
 
-    <footer id="about-us">
-        <div class="wrapper">
-            <div class="container">
-                <!-- Quick Links Row -->
-                <div class="quick-links-container">
-                    <!-- Support -->
-                    <div class="about-column support">
-                        <h3>Support</h3>
-                        <ul>
-                            <li><a href="javascript:void(0);">365 Days</a></li>
-                            <li><a href="javascript:void(0);">8760 Hours</a></li>
-                            <li><a href="javascript:void(0);">525600 Minutes</a></li>
-                            <li><a href="javascript:void(0);">31536000 Seconds</a></li>
-                        </ul>
-                    </div>
-                    <!-- Location -->
-                    <div class="about-column location">
-                        <h3>Location</h3>
-                        <ul>
-                            <li><a href="javascript:void(0);">Plot-1, IT Park Rd, Nagpur MH-440022</a></li>
-                            <li><a href="tel:+918956118607">+91-895 611 8607</a></li>
-                            <li><a href="mailto:connect@kutumbinfo.com">connect@kutumbinfo.com</a></li>
-                            <li><a href="mailto:kkutumbinfo@gmail.com">kkutumbinfo@gmail.com</a></li>
-                        </ul>
-                    </div>
-                    <!-- Explore Us -->
-                    <div class="about-column">
-                        <h3>Explore Us</h3>
-                        <ul>
-                            <li><a href="../Services/web_dev.html" target="_blank">Web Development Portfolio</a></li>
-                            <li><a href="../Services/mob_app.html" target="_blank">Mobile Application Portfolio</a></li>
-                            <li><a href="../work_with_us.html" target="_blank">About Us</a></li>
-                            <li><a href="../work_with_us.html#contact-form" target="_blank">Careers</a></li>
-                            <li><a href="https://azlogics.com/" target="_blank">Associate Venture</a></li>
-                        </ul>
-                    </div>
-                    <!-- Products -->
-                    <div class="about-column">
-                        <h3>Products</h3>
-                        <ul>
-                            <li><a href="KYCPLUS.html" target="_blank">KYC Plus</a></li>
-                            <li><a href="RPACPC.html" target="_blank">RPACPC</a></li>
-                            <li><a href="AZAPI.html" target="_blank">AZAPI</a></li>
-                            <li><a href="wpx_nexus.html" target="_blank">WPS</a></li>
-                        </ul>
-                    </div>
+    <!-- Footer Section -->
+<footer id="about-us">
+    <div class="wrapper">
+        <div class="container">
+            <!-- Quick Links Row -->
+            <div class="quick-links-container">
+                <!-- Support -->
+                <div class="about-column support">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="javascript:void(0);">365 Days</a></li>
+                        <li><a href="javascript:void(0);">8760 Hours</a></li>
+                        <li><a href="javascript:void(0);">525600 Minutes</a></li>
+                        <li><a href="javascript:void(0);">31536000 Seconds</a></li>
+                    </ul>
                 </div>
-            </div>
-
-            <!-- Footer Row with Logo, Links, and Social Media -->
-            <div class="footer-row">
-                <!-- Footer Logo -->
-                <div class="footer-logo">
-                    <img src="../assets/images/logo kutumbinfo13.png" alt="Kutumbinfo Logo">
+                <!-- Location -->
+                <div class="about-column location">
+                    <h3>Location</h3>
+                    <ul>
+                        <li><a href="javascript:void(0);">Plot-1, IT Park Rd, Nagpur MH-440022</a></li>
+                        <li><a href="tel:+918956118607">+91-895 611 8607</a></li>
+                        <li><a href="mailto:connect@kutumbinfo.com">connect@kutumbinfo.com</a></li>
+                        <li><a href="mailto:kkutumbinfo@gmail.com">kkutumbinfo@gmail.com</a></li>
+                    </ul>
                 </div>
-                
-                <!-- Footer Note with Links and Copyright -->
-                <div class="footer-note">
-                    <!-- Footer Links -->
-                    <div class="footer-links">
-                        <ul>
-                            <li><a href="../terms_and_conditions.html#terms">Terms and Conditions</a></li>
-                            <li><a href="../terms_and_conditions.html#privacy">Privacy Policy</a></li>
-                            <li><a href="../terms_and_conditions.html#refunds">Refunds</a></li>
-                            <li><a href="../sitemap.html">Sitemap</a></li>
-                        </ul>
-                    </div>
-                    <p class="copyright">All Rights Reserved © Copyright 2025 | KuTuMbinfo Pvt Ltd</p>
+                <!-- Explore Us -->
+                <div class="about-column">
+                    <h3>Explore Us</h3>
+                    <ul>
+                        <li><a href="../Services/web_dev.html" target="_blank">Web Development Portfolio</a></li>
+                        <li><a href="../Services/mob_app.html" target="_blank">Mobile Application Portfolio</a></li>
+                        <li><a href="../work_with_us.html" target="_blank">About Us</a></li>
+                        <li><a href="../work_with_us.html#contact-form" target="_blank">Careers</a></li>
+                        <li><a href="https://azlogics.com/" target="_blank">Associate Venture</a></li>
+                    </ul>
                 </div>
-                
-                <!-- Stay Connected -->
-                <div class="stay-connected">
-                    <h3>Stay Connected</h3>
-                    <div class="social-icons">
-                        <a href="#"><img src="../assets/images/social_icon/facebook.png" alt="Facebook"></a>
-                        <a href="#"><img src="../assets/images/social_icon/whatsapp.png" alt="WhatsApp"></a>
-                        <a href="#"><img src="../assets/images/social_icon/instagram.png" alt="Instagram"></a>
-                        <a href="#"><img src="../assets/images/social_icon/twitter.png" alt="X (Twitter)"></a>
-                        <a href="#"><img src="../assets/images/social_icon/linkedin.png" alt="LinkedIn"></a>
-                    </div>
+                <!-- Products -->
+                <div class="about-column">
+                    <h3>Products</h3>
+                    <ul>
+                        <li><a href="KYCPLUS.html" target="_blank">KYC Plus</a></li>
+                        <li><a href="RPACPC.html" target="_blank">RPACPC</a></li>
+                        <li><a href="AZAPI.html" target="_blank">AZAPI</a></li>
+                        <li><a href="wpx_nexus.html" target="_blank">WPS</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </footer>
+
+        <!-- Footer Row with Logo, Links, and Social Media -->
+        <div class="footer-row">
+            <!-- Footer Logo -->
+            <div class="footer-logo">
+                <img src="../assets/images/logo kutumbinfo13.png" alt="Kutumbinfo Logo">
+            </div>
+            
+            <!-- Footer Note with Links and Copyright -->
+            <div class="footer-note">
+                <!-- Footer Links -->
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="../terms_and_conditions.html#terms">Terms and Conditions</a></li>
+                        <li><a href="../terms_and_conditions.html#privacy">Privacy Policy</a></li>
+                        <li><a href="../terms_and_conditions.html#refunds">Refunds</a></li>
+                        <li><a href="../sitemap.html">Sitemap</a></li>
+                    </ul>
+                </div>
+                <p class="copyright">All Rights Reserved © Copyright 2025 | KuTuMbinfo Pvt Ltd</p>
+            </div>
+            
+            <!-- Stay Connected -->
+            <div class="stay-connected">
+                <h3>Stay Connected</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="../assets/images/social_icon/facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="../assets/images/social_icon/whatsapp.png" alt="WhatsApp"></a>
+                    <a href="#"><img src="../assets/images/social_icon/instagram.png" alt="Instagram"></a>
+                    <a href="#"><img src="../assets/images/social_icon/twitter.png" alt="X (Twitter)"></a>
+                    <a href="#"><img src="../assets/images/social_icon/linkedin.png" alt="LinkedIn"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+
+    <!-- Scripts -->
     <script src="../assets/js/main.js"></script>
-    <script src="products.js"></script>
+    <!-- Removed reference to products.js as functionality has been merged into main.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </body>
 </html>
