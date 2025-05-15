@@ -12,6 +12,7 @@
     --shadow-sm: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1);
     --shadow-md: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.15);
     --transition-normal: 0.3s ease;
+    --gradient-dark: linear-gradient(135deg, #192939 0%, #0d1824 100%);
   }
   
   body, html {
@@ -45,6 +46,13 @@
   .bg-green { background-color: var(--secondary-color); }
   .bg-green-hover { background-color: var(--secondary-hover); }
   .bg-light { background-color: var(--bg-light); }
+  .bg-dark-gradient { 
+    background: var(--gradient-dark) !important; 
+    position: relative;
+    z-index: 0;
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+  }
   
   /* Layout Containers */
   .main-container, .wrapper {
@@ -594,11 +602,14 @@
     transform: translateX(-50%);
   }
   
-  .hero-image img {
-    width: 15.625rem;
-    height: 15.625rem;
-    object-fit: contain;
-    z-index: 1;
+  /* Hero Visual Images */
+  .hero-visual img, .hero-image img {
+    max-width: 115%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
     filter: drop-shadow(0 0.625rem 0.9375rem rgba(0, 0, 0, 0.2));
     animation: float 6s ease-in-out infinite;
   }
@@ -2560,9 +2571,30 @@
 
 .particle {
     position: absolute;
-    background-color: rgba(57, 226, 157, 0.4);
+    background-color: rgba(57, 226, 157, 0.6);
     border-radius: 50%;
+    z-index: 3;
+}
+
+/* Enhanced particles for dark gradient backgrounds */
+.bg-dark-gradient .particles-container {
     z-index: 1;
+}
+
+.bg-dark-gradient .particle {
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
+    animation: floatParticle 15s infinite ease-in-out;
+}
+
+.bg-dark-gradient .particle:nth-child(odd) {
+    background-color: rgba(110, 175, 42, 0.25);
+    box-shadow: 0 0 5px rgba(110, 175, 42, 0.2);
+}
+
+.bg-dark-gradient .particle:nth-child(3n) {
+    background-color: rgba(25, 41, 57, 0.4);
+    box-shadow: 0 0 3px rgba(255, 255, 255, 0.1);
 }
 
 /* ====== OVERVIEW SECTION ====== */
@@ -3680,6 +3712,10 @@
     color: white;
 }
 
+.fintech-hero-content h1 .text-accent {
+    color: #6eaf2a;
+}
+
 .fintech-hero-content p {
     font-size: 1.25rem;
     margin-bottom: 2.5em;
@@ -3954,23 +3990,24 @@
     background-color: rgba(110, 175, 42, 0.08);
     border-radius: 50%;
     z-index: -1;
+    display: none; /* Hide the circle */
 }
 
 .solution-icon {
     width: 4em;
     height: 4em;
-    background: var(--gradient-accent);
+    background-color: rgba(110, 175, 42, 0.15);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 1.25em;
-    box-shadow: 0 0.625em 1.25em rgba(110, 175, 42, 0.3);
+    box-shadow: 0 0.625em 1.25em rgba(110, 175, 42, 0.2);
 }
 
 .solution-icon i {
     font-size: 1.5em;
-    color: var(--white);
+    color: #6eaf2a;
 }
 
 .solution-content h3 {
@@ -4033,6 +4070,31 @@
     display: flex;
     gap: 0.9375em;
     margin-top: auto;
+    padding-top: 1.25em;
+}
+
+.solution-buttons .learn-more-btn,
+.solution-buttons .secondary-button {
+    font-size: 0.875rem;
+    padding: 0.625em 1.25em;
+    border-radius: 2em;
+}
+
+.solution-buttons .learn-more-btn i,
+.solution-buttons .secondary-button i {
+    font-size: 0.75rem;
+    margin-left: 0.5em;
+}
+
+.solution-buttons .secondary-button {
+    color: #192939;
+    border: 0.0625em solid #192939;
+    background-color: transparent;
+}
+
+.solution-buttons .secondary-button:hover {
+    background-color: #192939;
+    color: white;
 }
 
 .solution-cta {
@@ -4315,16 +4377,18 @@
 
 /* CTA Section */
 .prod-cta-section {
-    background: var(--gradient-dark);
     color: var(--white);
     padding: 3.75em 0;
     text-align: center;
+    position: relative;
 }
 
 .prod-cta-container {
     max-width: 62.5em;
     margin: 0 auto;
     padding: 0 1.25em;
+    position: relative;
+    z-index: 2;
 }
 
 .prod-cta-container h3 {
@@ -4814,5 +4878,28 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+/* KYCPLUS Page Specific Styles */
+.hero-section.kycplus-hero {
+  padding-top: 8rem; /* Increased top padding from the default 5.625rem */
+}
+
+.hero-section.kycplus-hero .hero-content h1 {
+  color: white; /* To match web-hero-content h1 color */
+  background: none;
+  -webkit-text-fill-color: white;
+}
+
+.hero-section.kycplus-hero .hero-content h2 {
+  color: white;
+}
+
+.hero-section.kycplus-hero .hero-content p {
+  color: white; /* To match web-hero-content p color */
+}
+
+.hero-section.kycplus-hero .prod-text-accent {
+  color: #6eaf2a; /* To match text-accent color */
 }
 

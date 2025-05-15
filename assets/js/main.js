@@ -197,6 +197,41 @@ function handleNavbarScroll() {
   }
 }
 
+/**
+ * Initializes particles for sections with gradient backgrounds
+ */
+function initGradientSectionParticles() {
+  // Select all sections with bg-dark-gradient class that have particles container
+  const darkGradientSections = document.querySelectorAll('.bg-dark-gradient');
+  
+  if (darkGradientSections.length > 0) {
+    darkGradientSections.forEach((section, index) => {
+      // Get the particles container in this section
+      const container = section.querySelector('.particles-container');
+      if (!container) return;
+      
+      // Create particles for each container
+      for (let i = 0; i < 15; i++) {
+        const particle = document.createElement('div');
+        particle.classList.add('particle');
+        
+        // Set random properties for each particle
+        const size = Math.random() * 5 + 2;
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+        particle.style.top = `${Math.random() * 100}%`;
+        particle.style.left = `${Math.random() * 100}%`;
+        particle.style.opacity = Math.random() * 0.5 + 0.2;
+        particle.style.animationDuration = `${Math.random() * 10 + 5}s`;
+        particle.style.animationDelay = `${Math.random() * 5}s`;
+        
+        // Add to container
+        container.appendChild(particle);
+      }
+    });
+  }
+}
+
 // ----- Navigation Click Handlers -----
 
 // Main navigation handlers
@@ -997,4 +1032,7 @@ document.addEventListener('DOMContentLoaded', function() {
           });
       });
   }
+  
+  // Initialize particles for gradient sections
+  initGradientSectionParticles();
 });

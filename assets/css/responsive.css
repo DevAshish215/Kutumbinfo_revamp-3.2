@@ -3208,11 +3208,16 @@
     .solution-buttons {
         flex-direction: column;
         gap: 10px;
+        padding-top: 0.9375em;
     }
     
-    .solution-cta, .solution-details {
+    .solution-buttons .learn-more-btn,
+    .solution-buttons .secondary-button {
         width: 100%;
         justify-content: center;
+        text-align: center;
+        padding: 0.5em 1em;
+        font-size: 0.85rem;
     }
     
     .solution-icon {
@@ -3308,4 +3313,23 @@
     .solution-feature-content h4 {
         font-size: 15px;
     }
+}
+
+/* Hero images responsive styles */
+@media (max-width: 1200px) {
+  .hero-visual img, .hero-image img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-visual img, .hero-image img {
+    max-width: 85%;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-visual img, .hero-image img {
+    max-width: 75%;
+  }
 }
