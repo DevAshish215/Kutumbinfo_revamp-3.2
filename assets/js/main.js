@@ -876,7 +876,7 @@ function initForms() {
  * Set up contact form links
  */
 function setupContactFormLinks() {
-    const contactLinks = document.querySelectorAll('a[href*="#contact"]');
+    const contactLinks = document.querySelectorAll('a[href*="#contact"]:not([href*="work_with_us.html#contact"])');
     
     contactLinks.forEach(link => {
         link.addEventListener('click', function(e) {
