@@ -201,35 +201,8 @@ function handleNavbarScroll() {
  * Initializes particles for sections with gradient backgrounds
  */
 function initGradientSectionParticles() {
-  // Select all sections with bg-dark-gradient class that have particles container
-  const darkGradientSections = document.querySelectorAll('.bg-dark-gradient');
-  
-  if (darkGradientSections.length > 0) {
-    darkGradientSections.forEach((section, index) => {
-      // Get the particles container in this section
-      const container = section.querySelector('.particles-container');
-      if (!container) return;
-      
-      // Create particles for each container
-      for (let i = 0; i < 15; i++) {
-        const particle = document.createElement('div');
-        particle.classList.add('particle');
-        
-        // Set random properties for each particle
-        const size = Math.random() * 5 + 2;
-        particle.style.width = `${size}px`;
-        particle.style.height = `${size}px`;
-        particle.style.top = `${Math.random() * 100}%`;
-        particle.style.left = `${Math.random() * 100}%`;
-        particle.style.opacity = Math.random() * 0.5 + 0.2;
-        particle.style.animationDuration = `${Math.random() * 10 + 5}s`;
-        particle.style.animationDelay = `${Math.random() * 5}s`;
-        
-        // Add to container
-        container.appendChild(particle);
-      }
-    });
-  }
+  // Particles functionality removed
+  return;
 }
 
 // ----- Navigation Click Handlers -----
@@ -348,37 +321,59 @@ function setupMobileDropdownBoxes() {
 // ----- Animation Functions -----
 
 /**
- * Creates particle background effect for the hero section
+ * Creates particle background effect for hero sections
  */
 function createParticles() {
-  const heroSection = document.querySelector('.hero, .why-hero-section, .web-hero-section');
-  const particlesContainer = document.querySelector('.particles-container');
-  if (!heroSection || !particlesContainer) return;
-
-  // Use document fragment for better performance
-  const fragment = document.createDocumentFragment();
-  const particleCount = 40; // Reduced from 70 to 40 for fewer particles
-
-  for (let i = 0; i < particleCount; i++) {
-    const particle = document.createElement('div');
-    particle.className = 'particle';
+  // Find all particle containers across the page
+  const particlesContainers = document.querySelectorAll('.particles-container');
+  if (!particlesContainers.length) return;
+  
+  // Loop through each container and create particles
+  particlesContainers.forEach(particlesContainer => {
+    // Clear any existing particles first
+    particlesContainer.innerHTML = '';
     
-    // Set styles with random properties
-    particle.style.cssText = `
-      left: ${Math.random() * 100}%;
-      top: ${Math.random() * 100}%;
-      width: ${Math.random() * 5 + 1}px;
-      height: ${Math.random() * 5 + 1}px;
-      opacity: ${Math.random() * 0.6 + 0.2};
-      animation: floatParticle ${Math.random() * 25 + 10}s linear infinite;
-      animation-delay: ${Math.random() * 5}s;
-    `;
-
-    fragment.appendChild(particle);
-  }
-
-  // Append all particles at once for better performance
-  particlesContainer.appendChild(fragment);
+    // Create 20 particles with random sizes, positions and animations
+    for (let i = 0; i < 20; i++) {
+      const particle = document.createElement('div');
+      particle.classList.add('particle');
+      
+      // Random size between 2px and 5px (smaller range than before)
+      const size = Math.random() * 3 + 2;
+      particle.style.width = `${size}px`;
+      particle.style.height = `${size}px`;
+      
+      // Random position
+      particle.style.top = `${Math.random() * 100}%`;
+      particle.style.left = `${Math.random() * 100}%`;
+      
+      // Random animation delay for more natural effect
+      particle.style.animationDelay = `${Math.random() * 5}s`;
+      
+      // Random animation duration between 8s and 20s for varied speeds
+      particle.style.animationDuration = `${Math.random() * 12 + 8}s`;
+      
+      // Add randomized movement direction through custom animation name
+      const animations = ['floatParticleUp', 'floatParticleDown', 'floatParticleLeft', 'floatParticleRight', 'floatParticleDiagonal'];
+      const randomAnimation = animations[Math.floor(Math.random() * animations.length)];
+      particle.style.animationName = randomAnimation;
+      
+      // Add different colors for variety with more transparency
+      if (i % 3 === 0) {
+        // Blue particles (more transparent)
+        particle.style.backgroundColor = 'rgba(25, 41, 60, 0.3)';
+      } else if (i % 3 === 1) {
+        // White particles (more transparent)
+        particle.style.backgroundColor = 'rgba(255, 255, 255, 0.3)';
+      } else {
+        // Brand color particles (more transparent)
+        particle.style.backgroundColor = 'rgba(57, 226, 157, 0.3)';
+      }
+      
+      // Add particle to container
+      particlesContainer.appendChild(particle);
+    }
+  });
 }
 
 /**
@@ -698,30 +693,6 @@ function setActiveNavbarItem() {
  * Initialize fintech specific features
  */
 function initFintechFeatures() {
-    // Create particles for decorative effect
-    createProductParticles();
-    
-    // Generate particles for hero section background
-    const heroSection = document.querySelector('.fintech-hero-section') || document.querySelector('.product-hero-section');
-    if (heroSection) {
-        const particlesContainer = heroSection.querySelector('.particles-container');
-        if (particlesContainer) {
-            for (let i = 0; i < 20; i++) {
-                const size = Math.random() * 10 + 5;
-                const particle = document.createElement('div');
-                particle.classList.add('particle');
-                particle.style.width = size + 'px';
-                particle.style.height = size + 'px';
-                particle.style.left = Math.random() * 100 + '%';
-                particle.style.top = Math.random() * 100 + '%';
-                particle.style.opacity = Math.random() * 0.5 + 0.1;
-                particle.style.animationDuration = (Math.random() * 15 + 10) + 's';
-                particle.style.animationDelay = (Math.random() * 5) + 's';
-                particlesContainer.appendChild(particle);
-            }
-        }
-    }
-    
     // Initialize tabs functionality
     initTabs();
     
@@ -736,71 +707,19 @@ function initFintechFeatures() {
  * Initialize product particles using ParticlesJS library
  */
 function createProductParticles() {
-    if (typeof particlesJS !== 'undefined' && document.getElementById('particles-js')) {
-        particlesJS('particles-js', {
-            particles: {
-                number: { value: 80, density: { enable: true, value_area: 800 } },
-                color: { value: '#39e29d' },
-                shape: {
-                    type: 'circle',
-                    stroke: { width: 0, color: '#000000' },
-                    polygon: { nb_sides: 5 }
-                },
-                opacity: {
-                    value: 0.5,
-                    random: false,
-                    anim: { enable: false }
-                },
-                size: {
-                    value: 3,
-                    random: true,
-                    anim: { enable: false }
-                },
-                line_linked: {
-                    enable: true,
-                    distance: 150,
-                    color: '#39e29d',
-                    opacity: 0.4,
-                    width: 1
-                },
-                move: {
-                    enable: true,
-                    speed: 3,
-                    direction: 'none',
-                    random: false,
-                    straight: false,
-                    out_mode: 'out',
-                    bounce: false,
-                    attract: { enable: false }
-                }
-            },
-            interactivity: {
-                detect_on: 'canvas',
-                events: {
-                    onhover: { enable: true, mode: 'repulse' },
-                    onclick: { enable: true, mode: 'push' },
-                    resize: true
-                },
-                modes: {
-                    grab: { distance: 400, line_linked: { opacity: 1 } },
-                    bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 },
-                    repulse: { distance: 200, duration: 0.4 },
-                    push: { particles_nb: 4 },
-                    remove: { particles_nb: 2 }
-                }
-            },
-            retina_detect: true
-        });
-    }
+  // Particles functionality removed
+  return;
 }
 
 /**
- * Switch between tabs in the products page
+ * Switch between content tabs
  */
 function switchTab(tabName) {
-    const tabs = document.querySelectorAll('.product-tab');
+    // Find all tab contents
+    const tabs = document.querySelectorAll('.tab-content');
     const buttons = document.querySelectorAll('.tab-button');
     
+    // First, remove active class from all tabs and buttons
     tabs.forEach(tab => {
         tab.classList.remove('active');
     });
@@ -809,7 +728,8 @@ function switchTab(tabName) {
         button.classList.remove('active');
     });
     
-    document.getElementById(tabName).classList.add('active');
+    // Then add active class to the selected tab and button
+    document.getElementById(tabName + '-content').classList.add('active');
     document.getElementById(tabName + '-tab').classList.add('active');
 }
 
@@ -979,60 +899,70 @@ function setupContactFormLinks() {
     });
 }
 
+/**
+ * Adds particles containers to all hero sections
+ */
+function addParticlesToHeroSections() {
+  // Get all hero sections - various classes used across different templates
+  const heroSections = document.querySelectorAll(
+    '.hero-section, .web-hero-section, .expertise-hero-section, .why-hero-section, .work-hero-section'
+  );
+  
+  // If no hero sections found, exit
+  if (!heroSections.length) return;
+  
+  // For each hero section
+  heroSections.forEach(section => {
+    // Skip if particles container already exists
+    if (section.querySelector('.particles-container')) return;
+    
+    // Create particles container
+    const particlesContainer = document.createElement('div');
+    particlesContainer.className = 'particles-container';
+    
+    // Insert as first child of hero section
+    section.insertBefore(particlesContainer, section.firstChild);
+  });
+  
+  // Now create particles in all containers
+  createParticles();
+}
+
 // ----- Main Initialization -----
 document.addEventListener('DOMContentLoaded', function() {
-  // Initialize the components
+  // Initialize standard features
   initializeNavbar();
-  
-  // Add scroll event listener for navbar
-  window.addEventListener('scroll', handleNavbarScroll);
-  window.addEventListener('scroll', initScrollAnimations);
-  
-  // Initialize scroll animations
   initScrollAnimations();
-  
-  // Initialize counters for achievements section
   initializeCounters();
+  initializeContactForm();
+  setActiveNavbarItem();
+  setupMobileDropdownBoxes();
+  loadNavbarAndFooter();
+  initializeTalkToTeamButtons();
+  initializeSmoothScrolling();
   
-  // Initialize the contact form if present
-    initializeContactForm();
-    
-  // Initialize work with us specific functionalities
-    enhanceWorkWithUsSection();
-    
-  // Set up talk to team buttons
-    initializeTalkToTeamButtons();
-    
-    // Initialize smooth scrolling
-    initializeSmoothScrolling();
-    
-  // Set active navbar item based on current page
-    setActiveNavbarItem();
+  // Add particles to all hero sections
+  addParticlesToHeroSections();
   
-  // Create particles effect for home page
-  if (document.querySelector('.hero-section')) {
-    createParticles();
+  // Initialize fintech features
+  if (document.querySelector('.fintech-hero-section, .product-hero-section')) {
+    initFintechFeatures();
   }
   
-  // Add product page functionality
-  setupContactFormLinks();
-  
-  // Initialize fintech specific features if on a fintech/product page
-  if (document.querySelector('.fintech-hero-section') || document.querySelector('.product-hero-section')) {
-      setTimeout(initFintechFeatures, 500);
-  }
-  
-  // Initialize tabs functionality for product/service tabs
+  // Initialize tabs for products
   const tabButtons = document.querySelectorAll('.tab-button');
   if (tabButtons.length > 0) {
-      tabButtons.forEach(button => {
-          button.addEventListener('click', function() {
-              const tabName = this.getAttribute('id').replace('-tab', '');
-              switchTab(tabName);
-          });
+    tabButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const tabName = this.id.replace('-tab', '');
+        switchTab(tabName);
       });
+    });
   }
   
-  // Initialize particles for gradient sections
-  initGradientSectionParticles();
+  // Enhance the Work With Us section if present
+  enhanceWorkWithUsSection();
+  
+  // Set up contact form links
+  setupContactFormLinks();
 });

@@ -20,9 +20,48 @@
     z-index: 2;
   }
   
-  /* Hide paragraphs in service boxes on mobile */
+  /* Service box mobile layout - modified for new layout */
+  .services-section .service-box {
+    display: block;
+    position: relative;
+    padding-top: 0.7rem;
+    padding-bottom: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .services-section .service-icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -0.5rem;
+    padding: 0.5rem;
+    padding-top: 0.8rem;
+  }
+  
+  .services-section .service-content {
+    display: block;
+    margin-top: 1rem;
+  }
+  
+  .services-section .service-content h3 {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 1rem;
+    position: absolute;
+    top: 0.1rem;
+    left: 5.2rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    line-height: 1.3;
+  }
+  
+  /* Show paragraphs but position them below both icon and heading */
   .services-section .service-content p {
-    display: none;
+    display: block;
+    margin-top: 1.5rem;
+    text-align: justify;
+    clear: both;
+    padding-left: 0.2rem;
   }
 }
 
@@ -527,7 +566,10 @@
   
   /* But specifically hide paragraphs in the services section */
   #services .service-content p {
-    display: none !important;
+    display: block !important;
+    margin-top: 0.5rem !important;
+    text-align: left !important;
+    clear: both !important;
   }
 
   body {
@@ -758,7 +800,10 @@
   
   /* But specifically hide paragraphs in the services section */
   #services .service-content p {
-    display: none !important;
+    display: block !important;
+    margin-top: 0.5rem !important;
+    text-align: left !important;
+    clear: both !important;
   }
 
   .web-hero-section {
@@ -1616,14 +1661,15 @@
   }
 
   .service-icon {
-    width: 65px;
-    height: 65px;
-    padding: 12px;
+    width: 3.2rem;
+    height: 3.2rem;
+    padding: 0.4rem;
+    margin-top: -0.4rem;
   }
 
   .service-icon img {
-    width: 45px;
-    height: 45px;
+    width: 2.5rem;
+    height: 2.5rem;
   }
 
   .section-title {
@@ -1799,7 +1845,10 @@
   
   /* But specifically hide paragraphs in the services section */
   #services .service-content p {
-    display: none !important;
+    display: block !important;
+    margin-top: 0.5rem !important;
+    text-align: left !important;
+    clear: both !important;
   }
 }
 
@@ -2135,7 +2184,10 @@
   
   /* But specifically hide paragraphs in the services section */
   #services .service-content p {
-    display: none !important;
+    display: block !important;
+    margin-top: 0.5rem !important;
+    text-align: left !important;
+    clear: both !important;
   }
 
   .web-hero-section {
@@ -2296,7 +2348,10 @@
   
   /* But specifically hide paragraphs in the services section */
   #services .service-content p {
-    display: none !important;
+    display: block !important;
+    margin-top: 0.5rem !important;
+    text-align: left !important;
+    clear: both !important;
   }
 }
 
@@ -2375,7 +2430,10 @@
   
   /* But specifically hide paragraphs in the services section */
   #services .service-content p {
-    display: none !important;
+    display: block !important;
+    margin-top: 0.5rem !important;
+    text-align: left !important;
+    clear: both !important;
   }
 }
 
@@ -2436,7 +2494,10 @@
   
   /* But specifically hide paragraphs in the services section */
   #services .service-content p {
-    display: none !important;
+    display: block !important;
+    margin-top: 0.5rem !important;
+    text-align: left !important;
+    clear: both !important;
   }
 }
 
@@ -2476,7 +2537,10 @@
   
   /* But specifically hide paragraphs in the services section */
   #services .service-content p {
-    display: none !important;
+    display: block !important;
+    margin-top: 0.5rem !important;
+    text-align: left !important;
+    clear: both !important;
   }
 }
 
@@ -2607,7 +2671,10 @@
   
   /* Hide service paragraphs specifically in the main Services Section */
   #services .service-content p {
-    display: none !important;
+    display: block !important;
+    margin-top: 0.5rem !important;
+    text-align: left !important;
+    clear: both !important;
   }
 }
 
@@ -2665,7 +2732,7 @@
 
   /* Other service content paragraphs properties */
   .service-content p {
-    text-align: center;
+    text-align: justify !important;
     overflow: visible;
     display: block !important;
     height: auto !important;
@@ -2800,7 +2867,7 @@
   .service-card .service-content p {
     text-align: center;
     font-size: 0.9rem;
-    line-height: 1.4;
+    line-height: 1.5;
   }
 }
 
@@ -3154,6 +3221,102 @@
         margin-bottom: 2.5rem;
     }
     
+    .fintech-solutions-container {
+        padding: 0 15px;
+    }
+    
+    .fintech-solution-card {
+        flex-direction: column;
+        margin-bottom: 2rem;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .fintech-solution-card .solution-image {
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+    }
+    
+    .fintech-solution-card .solution-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .fintech-solution-card .solution-content {
+        width: 100%;
+        padding: 20px;
+        border-radius: 0 0 8px 8px;
+        box-sizing: border-box;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+    
+    .fintech-solution-card.reverse-layout {
+        flex-direction: column;
+    }
+    
+    /* Center text for all cards on mobile, especially for Nagar Parishad card */
+    .fintech-solution-card .solution-content {
+        text-align: center;
+    }
+    
+    .fintech-solution-card .solution-header {
+        justify-content: center;
+    }
+    
+    .solution-description {
+        margin: 12px 0 15px;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        width: 100%;
+        max-width: 100%;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+    
+    .solution-features {
+        width: 100%;
+        margin-bottom: 15px;
+        padding-right: 5px;
+    }
+    
+    .solution-feature {
+        margin-bottom: 10px;
+    }
+    
+    .feature-item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 10px;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: left; /* Keep feature items text left-aligned for readability */
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 280px; /* Center the feature items with a max width */
+    }
+    
+    .feature-item i {
+        flex-shrink: 0;
+        margin-top: 3px;
+        font-size: 0.9rem;
+    }
+    
+    .feature-item span {
+        padding-left: 10px;
+        display: inline-block;
+        flex: 1;
+        font-size: 0.9rem;
+        line-height: 1.4;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+    
     /* KYC+ Specific Responsive */
     .advantages-container, .kyb-container, .rekyc-container, .kyc-focus-container {
         flex-direction: column;
@@ -3205,24 +3368,65 @@
         padding: 0 10px;
     }
     
+    .fintech-solution-card .solution-image {
+        height: 180px;
+    }
+    
     .solution-buttons {
         flex-direction: column;
         gap: 10px;
         padding-top: 0.9375em;
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     
     .solution-buttons .learn-more-btn,
     .solution-buttons .secondary-button {
-        width: 100%;
+        width: 80%;
+        max-width: 250px;
         justify-content: center;
         text-align: center;
         padding: 0.5em 1em;
         font-size: 0.85rem;
+        white-space: normal;
+        word-break: normal;
+        box-sizing: border-box;
+        overflow-wrap: break-word;
+        display: block;
+        line-height: 1.3;
+        margin: 0 auto;
     }
     
     .solution-icon {
         width: 50px;
         height: 50px;
+    }
+    
+    .feature-item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 8px;
+    }
+    
+    .feature-item i {
+        margin-top: 3px;
+        flex-shrink: 0;
+    }
+    
+    .feature-item span {
+        display: inline-block;
+        padding-left: 10px;
+        line-height: 1.4;
+        font-size: 0.85rem;
+    }
+    
+    .solution-description {
+        margin: 10px 0 15px;
+        font-size: 0.85rem;
+        line-height: 1.5;
     }
     
     .prod-cta-buttons {
@@ -3332,4 +3536,879 @@
   .hero-visual img, .hero-image img {
     max-width: 75%;
   }
+}
+
+/* WPS Nexus Page Responsive Styles */
+@media (max-width: 768px) {
+    .solution-feature-image {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 576px) {
+    .solution-feature-image {
+        max-width: 320px;
+    }
+}
+
+/* Key Features responsive styles */
+@media (max-width: 992px) {
+    #key-features .feature-box-content {
+        flex-direction: column;
+    }
+    
+    #key-features .solution-content,
+    #key-features .solution-image {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    #what-we-are {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    
+    #what-we-are .overview-text {
+        padding: 0 15px;
+    }
+    
+    #key-features .feature-box {
+        padding: 20px;
+    }
+}
+
+/* Data Protection responsive styles */
+@media (max-width: 768px) {
+    #data-protection .protection-cards-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #data-protection .feature-detailed-card {
+        margin-bottom: 20px;
+    }
+}
+
+/* Workflow responsive styles */
+@media (max-width: 991px) {
+    #workflow .workflow-step-container, 
+    #workflow .workflow-step-container.reverse {
+        flex-direction: column;
+    }
+    
+    #workflow .workflow-content,
+    #workflow .workflow-image {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    #workflow .workflow-image {
+        padding: 0 20px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    #workflow {
+        padding: 40px 0;
+    }
+    
+    #workflow .workflow-content {
+        padding: 30px 20px;
+    }
+    
+    #workflow .workflow-steps li {
+        font-size: 14px;
+    }
+}
+
+/* Dashboard responsive styles */
+@media (max-width: 992px) {
+    #dashboard .dashboard-container {
+        flex-direction: column;
+    }
+    
+    #dashboard .dashboard-preview,
+    #dashboard .dashboard-features {
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    #dashboard .dashboard-preview {
+        margin-bottom: 30px;
+    }
+    
+    #dashboard .dashboard-feature-card {
+        min-width: calc(50% - 25px);
+    }
+}
+
+@media (max-width: 768px) {
+    #dashboard {
+        padding: 40px 0;
+    }
+    
+    #dashboard .card-body {
+        padding: 25px 20px;
+    }
+    
+    #dashboard .card-subtitle {
+        font-size: 20px;
+    }
+    
+    #dashboard .dashboard-list li {
+        font-size: 14px;
+    }
+    
+    #dashboard .dashboard-features-grid {
+        margin-top: 40px;
+        gap: 20px;
+    }
+    
+    #dashboard .dashboard-feature-card {
+        min-width: 100%;
+        margin-bottom: 15px;
+    }
+}
+
+/* Sitemap Responsive Styles */
+@media (max-width: 768px) {
+  .sitemap-hero {
+    padding: 60px 20px;
+    margin-top: 0; /* Changed from 60px to 0 to remove the gap */
+  }
+  
+  .sitemap-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .sitemap-section {
+    padding: 30px 20px;
+  }
+  
+  .sitemap-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .direct-links {
+    padding: 15px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sitemap-hero {
+    padding-top: 50px;
+    margin-top: 0;
+  }
+  
+  .sitemap-hero h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .sitemap-hero {
+    padding-top: 45px;
+    margin-top: 0;
+  }
+  
+  .sitemap-hero h1 {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sitemap-card {
+    padding: 20px 15px;
+  }
+  
+  .quick-nav {
+    gap: 10px;
+  }
+  
+  .quick-nav a {
+    padding: 8px 15px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Terms and Conditions Responsive Styles */
+@media (max-width: 768px) {
+  .legal-hero {
+    padding: 60px 20px;
+    margin-top: 0;
+  }
+  
+  .legal-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .legal-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 0 15px;
+  }
+  
+  .nav-link {
+    flex: 1;
+    text-align: center;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    white-space: normal;
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: 480px) {
+  .legal-hero h1 {
+    font-size: 1.8rem;
+  }
+  
+  .nav-link {
+    padding: 12px 8px;
+    font-size: 0.85rem;
+  }
+  
+  .section h2 {
+    font-size: 1.4rem;
+  }
+  
+  .section h3 {
+    font-size: 1.2rem;
+  }
+  
+  .section h4 {
+    font-size: 1.1rem;
+  }
+  
+  .contact-info {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Existing styles... */
+  
+  /* Refined service box layout for smaller screens */
+  .services-section .service-box {
+    padding: 0.5rem 0.8rem 0.9rem 0.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .services-section .service-icon {
+    width: 3.2rem;
+    height: 3.2rem;
+    padding: 0.4rem;
+    padding-top: 0.7rem;
+    margin-top: -0.5rem;
+  }
+  
+  .services-section .service-content h3 {
+    font-size: 1.3rem;
+    left: 4.7rem;
+    top: 0.05rem;
+  }
+  
+  .services-section .service-content p {
+    font-size: 0.95rem !important;
+    line-height: 1.5 !important;
+    margin-top: 1.4rem !important;
+    padding-left: 0.1rem !important;
+    text-align: justify !important;
+  }
+  
+  /* Existing styles continue... */
+}
+
+@media (max-width: 400px) {
+  /* Extra small screen adjustments */
+  .services-section .service-content h3 {
+    font-size: 1.2rem;
+    left: 4.3rem;
+    top: 0;
+  }
+  
+  .services-section .service-icon {
+    width: 3rem;
+    height: 3rem;
+    padding: 0.35rem;
+    padding-top: 0.65rem;
+    margin-top: -0.6rem;
+  }
+  
+  .services-section .service-icon img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .legal-hero {
+    padding-top: 80px;
+    margin-top: 0;
+    position: relative;
+    top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+    .solution-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+        width: 100%;
+        box-sizing: border-box;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+    
+    .solution-header .solution-icon {
+        margin-right: 15px;
+        margin-bottom: 0;
+        width: 45px;
+        height: 45px;
+        min-width: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        background-color: rgba(25, 41, 57, 0.08);
+        flex-shrink: 0;
+    }
+    
+    .solution-header h3 {
+        margin: 0;
+        font-size: 1.25rem;
+        line-height: 1.3;
+        flex: 1;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+    
+    .solution-content {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .fintech-solution-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .fintech-solution-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+}
+
+@media (max-width: 576px) {
+    .solution-header h3 {
+        font-size: 1.15rem;
+    }
+    
+    .solution-header .solution-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .fintech-solution-card .solution-content {
+        padding: 15px;
+    }
+    
+    .solution-description {
+        font-size: 0.85rem;
+        margin: 10px 0 12px;
+        line-height: 1.4;
+    }
+    
+    .solution-features {
+        padding-right: 0;
+    }
+    
+    .feature-item {
+        margin-bottom: 8px;
+    }
+    
+    .feature-item i {
+        font-size: 0.85rem;
+    }
+    
+    .feature-item span {
+        font-size: 0.82rem;
+        line-height: 1.3;
+        padding-left: 8px;
+    }
+    
+    .solution-buttons {
+        padding-top: 0.625em;
+    }
+    
+    .solution-buttons .learn-more-btn,
+    .solution-buttons .secondary-button {
+        padding: 0.5em 0.75em;
+        font-size: 0.82rem;
+    }
+}
+
+/* Product Pages Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    /* RPACPC & AZAPI Common Mobile Styles */
+    .prod-cta-container {
+        padding: 30px 15px !important;
+        text-align: center;
+    }
+    
+    .prod-cta-container h3 {
+        font-size: 20px !important;
+        line-height: 1.4 !important;
+        margin-bottom: 25px !important;
+        text-align: center;
+    }
+
+    .prod-cta-buttons {
+        flex-direction: row !important;
+        gap: 10px !important;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    
+    .prod-cta-button, .prod-secondary-button {
+        width: auto !important;
+        max-width: 140px !important;
+        padding: 8px 12px !important;
+        font-size: 13px !important;
+        border-radius: 5px !important;
+        margin: 0 !important;
+        text-align: center;
+    }
+    
+    /* RPACPC Mobile Styles */
+    .fintech-solution-card {
+        flex-direction: column !important;
+        margin-bottom: 40px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        border-radius: 10px;
+        overflow: hidden;
+        background: #f9f9f9;
+        width: 100%;
+    }
+    
+    .fintech-solution-card.reverse-layout {
+        flex-direction: column !important;
+    }
+    
+    .solution-image {
+        width: 100% !important;
+        margin-bottom: 20px;
+        text-align: center;
+        padding: 20px;
+        background-color: #ffffff;
+    }
+    
+    .solution-image img.solution-img {
+        max-width: 80% !important;
+        margin: 0 auto;
+        display: block;
+        border-radius: 8px;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+    
+    .solution-image img {
+        max-width: 80% !important;
+        margin: 0 auto;
+        border-radius: 8px;
+    }
+    
+    .solution-content {
+        width: 100% !important;
+        padding: 20px !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    
+    .solution-description {
+        width: 100% !important;
+        padding: 0 !important;
+    }
+    
+    .solution-description p {
+        font-size: 15px;
+        line-height: 1.5;
+        margin-bottom: 12px;
+    }
+    
+    .fintech-solution-card h3 {
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    
+    .solution-icon {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    
+    .solution-icon i {
+        font-size: 28px;
+        color: #0056b3;
+        background-color: rgba(0,86,179,0.1);
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* Features grid for mobile */
+    .features-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+    
+    .feature-item {
+        display: flex;
+        align-items: center;
+        padding: 12px 10px;
+        border-radius: 8px;
+        background-color: white;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        height: 100%;
+    }
+    
+    .feature-item i {
+        margin-right: 8px;
+        font-size: 16px;
+        color: #0056b3;
+    }
+    
+    .feature-item span {
+        font-size: 14px;
+        line-height: 1.3;
+    }
+    
+    /* Content wrapper adjustments */
+    .content-wrapper.content-flex-row {
+        flex-direction: column !important;
+    }
+    
+    .text-content.text-flex-1-5,
+    .image-content.image-flex-1 {
+        width: 100% !important;
+    }
+    
+    .image-content.image-flex-1 img {
+        max-width: 90% !important;
+        margin: 0 auto;
+        display: block;
+    }
+    
+    /* Section padding adjustments */
+    .solution-section, .features-list-section, .solutions-section {
+        padding: 40px 15px !important;
+    }
+    
+    .prod-section-header h2 {
+        font-size: 24px !important;
+        line-height: 1.3 !important;
+    }
+    
+    .prod-section-header {
+        margin-bottom: 20px;
+    }
+    
+    .prod-section-header p {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+    
+    .category-title {
+        font-size: 18px;
+        margin: 30px 0 20px;
+    }
+    
+    .text-content p {
+        font-size: 15px;
+        line-height: 1.5;
+        margin-bottom: 15px;
+    }
+    
+    .image-content {
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+    .image-rounded-shadow {
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    
+    /* Footer section adjustments for mobile */
+    .quick-links-container {
+        flex-direction: column !important;
+        text-align: center !important;
+    }
+    
+    .about-column {
+        width: 100% !important;
+        margin-bottom: 20px !important;
+    }
+    
+    .footer-row {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+    
+    .footer-logo, .footer-note, .stay-connected {
+        width: 100% !important;
+        margin-bottom: 20px !important;
+        text-align: center !important;
+    }
+    
+    .footer-links ul {
+        flex-direction: column !important;
+        gap: 10px !important;
+    }
+    
+    .about-column h3 {
+        margin-top: 25px;
+        margin-bottom: 15px;
+        font-size: 18px;
+    }
+    
+    .about-column ul li {
+        margin-bottom: 10px;
+    }
+    
+    .about-column ul li a {
+        font-size: 15px;
+    }
+    
+    .social-icons {
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .social-icons a img {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .copyright {
+        margin-top: 15px;
+        font-size: 14px;
+    }
+    
+    /* AZAPI Mobile Styles */
+    .prod-container, .azapi-container {
+        padding: 0 15px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    /* Hero section mobile alignment */
+    .expertise-hero-container {
+        flex-direction: column;
+        padding: 30px 15px;
+    }
+    
+    .expertise-hero-content {
+        width: 100%;
+        text-align: center;
+        padding-right: 0;
+    }
+    
+    .expertise-hero-image {
+        width: 100%;
+        margin-top: 30px;
+    }
+    
+    /* Services section tablet fixes */
+    .azapi-tabs-navigation {
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .azapi-tab-button {
+        min-width: 130px;
+        text-align: center;
+        padding: 10px;
+        margin: 0 5px;
+    }
+    
+    /* Service items mobile layout */
+    .service-item {
+        flex-direction: column;
+        margin-bottom: 40px;
+        display: flex;
+        position: relative;
+    }
+    
+    .service-item.row-reverse {
+        flex-direction: column;
+    }
+    
+    /* Create unified box for heading, image and content */
+    .service-unified-box {
+        border: 1px solid rgba(25, 41, 57, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        margin-bottom: 15px;
+        background-color: #fff;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    /* Box heading styling */
+    .service-box-heading {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #192939;
+        text-align: center;
+        padding: 15px 15px 10px;
+        margin: 0;
+        border-bottom: 1px solid rgba(25, 41, 57, 0.05);
+        width: 100%;
+        box-sizing: border-box;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+    
+    .service-content, 
+    .service-item.row-reverse .service-content {
+        width: 100%;
+        order: 3;
+        padding: 15px;
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+    }
+    
+    .service-content p {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+        box-sizing: border-box;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        text-align: left;
+        line-height: 1.6;
+        max-width: 100%;
+        padding: 0;
+    }
+    
+    .service-content p:first-of-type {
+        margin-top: 0;
+    }
+    
+    .service-image, 
+    .service-item.row-reverse .service-image {
+        width: 100%;
+        order: 2;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    .service-image img {
+        width: 100%;
+        display: block;
+        border-bottom: 1px solid rgba(25, 41, 57, 0.05);
+    }
+    
+    /* Tab content mobile fixes */
+    .azapi-tab-content {
+        padding: 20px 0;
+    }
+}
+
+/* Extra Small Screens */
+@media screen and (max-width: 480px) {
+    .expertise-hero-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .azapi-section-header h2,
+    .prod-section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .service-box-heading,
+    .service-content h3 {
+        font-size: 1.5rem;
+    }
+    
+    .service-content p {
+        font-size: 0.95rem;
+    }
+    
+    .azapi-tab-button {
+        min-width: 100px;
+        font-size: 0.9rem;
+    }
+    
+    .expertise-breadcrumb {
+        font-size: 0.8rem;
+    }
+}
+
+/* Very Small Screens */
+@media screen and (max-width: 380px) {
+    .prod-cta-buttons {
+        flex-direction: row !important;
+        gap: 10px !important;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .prod-cta-button, .prod-secondary-button {
+        width: auto !important;
+        max-width: 120px !important;
+        padding: 7px 10px !important;
+        font-size: 12px !important;
+    }
+}
+
+/* Tablets */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .features-grid {
+        grid-template-columns: 1fr 1fr 1fr !important;
+    }
+    
+    .fintech-solution-card,
+    .fintech-solution-card.reverse-layout {
+        flex-direction: column !important;
+    }
+    
+    .solution-image, .solution-content {
+        width: 100% !important;
+    }
+    
+    .solution-image {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .solution-image img {
+        max-width: 60% !important;
+    }
 }
