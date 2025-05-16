@@ -200,18 +200,22 @@
 <div id="main-content">
     <main class="prod-main-container">
         <!-- Hero Section -->
-        <section class="expertise-hero-section reveal-section">
-            <div class="expertise-hero-container">
-                <div class="expertise-hero-content reveal-item">
-                    <div class="expertise-breadcrumb">Home > Products > Fintech Solutions > AZAPI</div>
-                    <h1>AZ<span class="expertise-text-accent">API</span></h1>
-                    <p>Fast, accurate document OCR & CAPTCHA solving for automated workflows. Advanced OCR and CAPTCHA APIs designed to streamline identity verification and automate data extraction for secure, real-time digital platforms.</p>
+        <section class="hero-section bg-dark-blue reveal-section" role="banner">
+            <div id="particles-js"></div>
+            <div class="hero-container">
+                <div class="hero-content reveal-item">
+                    <div class="breadcrumb">Home > Products > Fintech Solutions > AZAPI</div>
+                    <h1>AZ<span class="prod-text-accent">API</span></h1>
+                    <h2>Fast, accurate document OCR & CAPTCHA solving for automated workflows</h2>
+                    <p>Advanced OCR and CAPTCHA APIs designed to streamline identity verification and automate data extraction for secure, real-time digital platforms.</p>
                 </div>
-                <div class="expertise-hero-image reveal-item">
-                    <div class="expertise-inner-ring"></div>
-                    <img src="../assets/images/product_img/AZAPI img/Azapi-hero-banner.webp" alt="AZAPI OCR & CAPTCHA Solution">
+                <div class="hero-visual reveal-item">
+                    <div class="expertise-inner-ring" style="z-index: 1;"></div>
+                    <img src="..\images\product_img\AZAPI img\Azapi-hero-banner.webp" alt="AZAPI OCR & CAPTCHA Solution" style="position: relative; z-index: 2;">
                 </div>
             </div>
+            <!-- Particles container -->
+            <div class="particles-container" aria-hidden="true"></div>
         </section>
 
         <!-- Overview Section -->
@@ -232,23 +236,23 @@
         </section>
 
         <!-- Services Section with Tabs -->
-        <section class="services-section azapi-services">
-            <div class="azapi-container">
-                <div class="azapi-section-header">
+        <section class="services-section reveal-section">
+            <div class="prod-container">
+                <div class="prod-section-header reveal-item">
                     <h2>Our Services</h2>
                     <p>Comprehensive OCR and CAPTCHA solutions to streamline your digital processes</p>
                 </div>
 
                 <!-- Tabs Navigation -->
-                <div class="azapi-tabs-navigation">
-                    <div class="azapi-tab-button active" id="ocr-tab" onclick="switchTab('ocr')">OCR Services</div>
-                    <div class="azapi-tab-button" id="captcha-tab" onclick="switchTab('captcha')">CAPTCHA Services</div>
+                <div class="tabs-navigation reveal-item">
+                    <div class="tab-button active" id="ocr-tab" onclick="switchTab('ocr')">OCR Services</div>
+                    <div class="tab-button" id="captcha-tab" onclick="switchTab('captcha')">CAPTCHA Services</div>
                 </div>
 
                 <!-- OCR Services Content -->
-                <div class="azapi-tab-content active" id="ocr-content">
+                <div class="tab-content active" id="ocr-content">
                     <!-- Aadhaar OCR -->
-                    <div class="service-item">
+                    <div class="service-item reveal-item">
                         <div class="service-content">
                             <h3>Aadhaar OCR</h3>
                             <p>Our Aadhaar OCR leverages cutting-edge OCR technology to efficiently and accurately extract data from Aadhaar cards. This service is tailored to simplify the data extraction process, ensuring that key information such as name, address, date of birth, Aadhaar number, gender, and the father's name is extracted swiftly and with precision.</p>
@@ -260,7 +264,7 @@
                     </div>
 
                     <!-- PAN OCR -->
-                    <div class="service-item row-reverse">
+                    <div class="service-item reveal-item row-reverse">
                         <div class="service-content">
                             <h3>PAN OCR</h3>
                             <p>Our PAN OCR utilizes advanced OCR technology to swiftly and accurately extract data from PAN cards. Designed for businesses and organizations that require quick and precise data extraction, this service seamlessly extracts details such as the PAN number, name, father's name, and date of birth from PAN cards.</p>
@@ -272,7 +276,7 @@
                     </div>
 
                     <!-- Passport OCR -->
-                    <div class="service-item">
+                    <div class="service-item reveal-item">
                         <div class="service-content">
                             <h3>Passport OCR</h3>
                             <p>Extract data from passports instantly and with high accuracy. Passport OCR API captures data from passport images and seamlessly auto-fills it into the correct fields, ensuring a faster, more efficient, and error-free form-filling experience.</p>
@@ -284,7 +288,7 @@
                     </div>
 
                     <!-- E-Invoice OCR -->
-                    <div class="service-item row-reverse">
+                    <div class="service-item reveal-item row-reverse">
                         <div class="service-content">
                             <h3>E-Invoice OCR</h3>
                             <p>Our E-Invoice OCR service allows you to upload any type of e-Invoice to accurately extract the data from it. Designed to streamline your invoicing process, this service enables you to extract essential information such as invoice number, invoice date, GSTINs of buyer and seller, invoice value, vendor information quickly and accurately. We ensure the accuracy of data by validating it directly with the GST Portal when processing e-Invoices.</p>
@@ -295,90 +299,84 @@
                         </div>
                     </div>
 
-                    <!-- GST Certificate OCR -->
+                    <!-- GST Certificate OCR and Certificate of Incorporation OCR -->
+                    <div class="service-row reveal-item">
                         <div class="service-item">
-                        <div class="service-content">
                             <h3>GST Certificate OCR</h3>
                             <p>Our GST Certificate OCR, a powerful solution designed to simplify GST data extraction. This innovative tool effortlessly captures crucial details such as Document Type, GST Number, Legal Name, Registration Type, Registration Date, Liability Date, Trade Name, Address, and QR Code directly from GST certificates, eliminating manual data entry.</p>
                             <p>By automating data extraction, GST Certificate OCR ensures unparalleled accuracy, reducing the risk of errors that could lead to compliance issues. With precise and fast processing, you can enhance productivity and save hours of administrative effort.</p>
                             <p>Take control of your GST compliance with GST Certificate OCR. Save time, reduce errors, and focus on growing your business. Try it today and experience the difference!</p>
-                        </div>
-                        <div class="service-image">
+                            <a href="#" class="btn">Get Started</a>
+                            <div>
                                 <img src="../assets/images/product_img/AZAPI img/gst_cert_output.webp" alt="GST Certificate OCR">
                             </div>
                         </div>
-
-                    <!-- Certificate of Incorporation OCR -->
-                    <div class="service-item row-reverse">
-                        <div class="service-content">
+                        <div class="service-item">
                             <h3>Certificate of Incorporation OCR</h3>
                             <p>Our Certificate of Incorporation OCR, a powerful tool designed to extract key details from Certificates of Incorporation with precision and speed. This advanced solution captures critical fields such as Document Type, TAN Number, Company Name, PAN Number, CIN Number, Incorporation Date, and Address, enabling effortless data management.</p>
                             <p>Certificate of Incorporation OCR ensures high accuracy, reducing errors and saving time in processing vital company information. It's perfect for businesses, legal professionals, and government agencies needing quick and reliable access to incorporation details.</p>
                             <p>Transform the way you manage business documents with Certificate of Incorporation OCR. Experience accuracy, speed, and convenience—get started today!</p>
-                        </div>
-                        <div class="service-image">
+                            <a href="#" class="btn">Get Started</a>
+                            <div>
                                 <img src="../assets/images/product_img/AZAPI img/incorp_cert_output.webp" alt="Certificate of Incorporation OCR">
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Bank Passbook OCR -->
+                    <!-- Bank Passbook OCR and Bank Cheque OCR -->
+                    <div class="service-row reveal-item">
                         <div class="service-item">
-                        <div class="service-content">
                             <h3>Bank Passbook OCR</h3>
                             <p>Bank Passbook OCR, a smart and efficient tool designed to extract essential information directly from bank passbooks. This advanced solution captures critical details like Document Type, Account Number, and IFSC Code, helping you save time and eliminate manual data entry.</p>
                             <p>Accuracy is at the heart of Bank Passbook OCR. By automating the data extraction process, it minimizes errors and ensures your records are always precise. Whether you need this information for account verification, financial analysis, or record-keeping, this tool makes it effortless.</p>
                             <p>Ideal for banks, financial institutions, and businesses, this solution enhances productivity and optimizes workflow. By reducing processing time, it allows your team to focus on delivering superior service and managing core operations.</p>
                             <p>Upgrade to Bank Passbook OCR and revolutionize how you handle passbook data. Try it today for faster, error-free processing!</p>
-                        </div>
-                        <div class="service-image">
+                            <a href="#" class="btn">Get Started</a>
+                            <div>
                                 <img src="../assets/images/product_img/AZAPI img/Bank passbook_output.webp" alt="Bank Passbook OCR">
                             </div>
                         </div>
-
-                    <!-- Bank Cheque OCR -->
-                    <div class="service-item row-reverse">
-                        <div class="service-content">
+                        <div class="service-item">
                             <h3>Bank Cheque OCR</h3>
                             <p>Our Bank Cheque OCR, a cutting-edge solution designed to simplify and accelerate financial workflows. This advanced tool effortlessly extracts key information like Document Type, Account Number, IFSC Code, MICR Code, Cheque Number, and Bank Name from cheques, saving your business valuable time and resources.</p>
                             <p>With Bank Cheque OCR, errors in manual data entry become a thing of the past. Accurate and efficient data extraction ensures your records are reliable and up-to-date. By automating tedious processes, you free your team to focus on what truly matters—delivering exceptional customer service and growing your business.</p>
                             <p>Whether you're in banking, finance, or accounting, this solution fits seamlessly into your operations. It reduces processing times and enhances workflow efficiency, making it a must-have for businesses aiming to stay ahead in today's competitive environment.</p>
-                        </div>
-                        <div class="service-image">
+                            <a href="#" class="btn">Get Started</a>
+                            <div>
                                 <img src="../assets/images/product_img/AZAPI img/Cheque_passbook_ceack.webp" alt="Bank Cheque OCR">
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Driving License OCR -->
+                    <!-- Driving License OCR and Voter Card OCR -->
+                    <div class="service-row reveal-item">
                         <div class="service-item">
-                        <div class="service-content">
                             <h3>Driving Licence OCR</h3>
                             <p>Driving licence OCR api streamlines customer onboarding by enabling instant pre-filling of forms. Customers can simply upload or scan their driving licence, and AZAPI will digitize the document with precision.</p>
                             <p>When combined with the AZAPI driving licence verification api, the onboarding process becomes seamless and efficient. By using just a driving licence image, AZAPI manages both document digitization and verification, delivering a smooth and hassle-free customer experience.</p>
                             <p>Driving licence OCR ensures instant accuracy, extracting names, addresses, licence numbers, expiration dates, etc. in seconds. Whether you're onboarding customers, verifying identities, or managing compliance, this tool makes the process hassle-free and error-proof.</p>
                             <p>Perfect for industries like car rentals, insurance, and banking, driving licence OCR empowers your operations with automation and precision. Its advanced AI ensures the highest accuracy, even with varying licence formats or image qualities. Integration is seamless, making it easy to enhance your workflows without any disruption.</p>
-                        </div>
-                        <div class="service-image">
+                            <a href="#" class="btn">Get Started</a>
+                            <div>
                                 <img src="../assets/images/product_img/AZAPI img/drivibg license_output.webp" alt="Driving License OCR">
                             </div>
                         </div>
-
-                    <!-- Voter Card OCR -->
-                    <div class="service-item row-reverse">
-                        <div class="service-content">
+                        <div class="service-item">
                             <h3>Voter Card OCR</h3>
                             <p>Effortlessly extract data from Voter ID cards with speed and precision.</p>
                             <p>When integrated with the AZAPI voter card OCR api, it captures data directly from a Voter ID card image and auto-fills it into the appropriate fields. This ensures a faster, more accurate, and error-free form-filling experience.</p>
                             <p>Streamline your operations with voter card OCR api, the smart solution for fast and accurate voter ID data extraction. Designed for businesses and organizations, this advanced tool digitizes essential information like names, addresses, voter ID numbers, and more in seconds.</p>
-                        </div>
-                        <div class="service-image">
+                            <a href="#" class="btn">Get Started</a>
+                            <div>
                                 <img src="../assets/images/product_img/AZAPI img/voter-id-output.webp" alt="Voter Card OCR">
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- CAPTCHA Services Content -->
-                <div class="azapi-tab-content" id="captcha-content">
-                    <div class="service-item">
+                <div class="tab-content" id="captcha-content">
+                    <div class="service-item reveal-item">
                         <div class="service-content">
                             <h3>Text Captcha Solver</h3>
                             <p>Our Text Captcha Solver service provides a reliable and efficient way to automatically solve text-based CAPTCHAs.
@@ -391,7 +389,7 @@
                         </div>
                     </div>
                     
-                    <div class="service-item row-reverse">
+                    <div class="service-item reveal-item row-reverse">
                         <div class="service-content">
                             <h3>Math Captcha</h3>
                             <p>Math Captcha Solver your ultimate tool for defeating frustrating CAPTCHAs in seconds. Tired of those tedious math puzzles? Our cutting-edge OCR technology makes solving math CAPTCHAs effortless. Simply submit your Math CAPTCHA images, and our cutting-edge OCR technology will automatically process the equation, providing the correct result in fraction of seconds. Whether for websites, apps, or other online platforms, AZAPI's Math CAPTCHA solver is designed to enhance user experiences and eliminate CAPTCHA roadblocks.</p>
@@ -413,8 +411,8 @@
         </section>
 
         <!-- CTA Section -->
-        <section class="prod-cta-section bg-dark-blue">
-            <div class="prod-cta-container">
+        <section class="prod-cta-section reveal-section">
+            <div class="prod-cta-container reveal-item">
                 <h3>95% Accuracy in Document Processing - AZAPI helps businesses eliminate errors and process documents faster, streamlining data extraction workflows across all industries.</h3>
                 
                 <div class="prod-cta-buttons">
@@ -514,109 +512,7 @@
 </div>
 
 <script src="../assets/js/main.js"></script>
-    <script>
-    // Initialize tab functionality
-    document.addEventListener('DOMContentLoaded', function() {
-        // Set default tab
-        const ocrTab = document.getElementById('ocr-tab');
-        const captchaTab = document.getElementById('captcha-tab');
-        const ocrContent = document.getElementById('ocr-content');
-        const captchaContent = document.getElementById('captcha-content');
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
-        // Add click listeners
-        ocrTab.addEventListener('click', function() {
-            ocrTab.classList.add('active');
-            captchaTab.classList.remove('active');
-            ocrContent.classList.add('active');
-            captchaContent.classList.remove('active');
-        });
-
-        captchaTab.addEventListener('click', function() {
-            captchaTab.classList.add('active');
-            ocrTab.classList.remove('active');
-            captchaContent.classList.add('active');
-            ocrContent.classList.remove('active');
-        });
-        
-        // Function to create unified boxes on mobile screens
-        function createUnifiedBoxes() {
-            const serviceItems = document.querySelectorAll('.service-item');
-            const isMobile = window.innerWidth <= 768;
-            
-            serviceItems.forEach(item => {
-                // Find existing elements
-                const heading = item.querySelector('.service-content h3');
-                const image = item.querySelector('.service-image');
-                const content = item.querySelector('.service-content');
-                
-                if (isMobile) {
-                    // Create unified box for mobile
-                    if (heading && image && content && !item.querySelector('.service-unified-box')) {
-                        // Create the unified box
-                        const box = document.createElement('div');
-                        box.classList.add('service-unified-box');
-                        
-                        // Create a heading element for the box
-                        const boxHeading = document.createElement('h3');
-                        boxHeading.classList.add('service-box-heading');
-                        boxHeading.innerHTML = heading.innerHTML;
-                        
-                        // Hide the original heading
-                        heading.style.display = 'none';
-                        
-                        // Remove elements from their current position
-                        if (item.contains(image)) item.removeChild(image);
-                        if (item.contains(content)) item.removeChild(content);
-                        
-                        // Add them to the new box in the right order
-                        box.appendChild(boxHeading);
-                        box.appendChild(image);
-                        box.appendChild(content);
-                        
-                        // Add the unified box to the item
-                        item.appendChild(box);
-                    }
-                } else {
-                    // Restore original layout for desktop
-                    const box = item.querySelector('.service-unified-box');
-                    if (box) {
-                        // Find elements in the box
-                        const boxHeading = box.querySelector('.service-box-heading');
-                        const image = box.querySelector('.service-image');
-                        const content = box.querySelector('.service-content');
-                        
-                        // Show the original heading again
-                        if (heading) heading.style.display = '';
-                        
-                        // Remove elements from box
-                        if (boxHeading) box.removeChild(boxHeading);
-                        if (image) box.removeChild(image);
-                        if (content) box.removeChild(content);
-                        
-                        // Add image and content back to the item
-                        const isRowReverse = item.classList.contains('row-reverse');
-                        
-                        if (isRowReverse) {
-                            item.appendChild(image);
-                            item.appendChild(content);
-                        } else {
-                            item.appendChild(content);
-                            item.appendChild(image);
-                        }
-                        
-                        // Remove the empty box
-                        item.removeChild(box);
-                    }
-                }
-            });
-        }
-        
-        // Run on page load
-        createUnifiedBoxes();
-        
-        // Run when window is resized
-        window.addEventListener('resize', createUnifiedBoxes);
-    });
-</script>
 </body>
 </html> 

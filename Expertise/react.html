@@ -209,6 +209,8 @@
                     <img src="../assets/images/expertise/react_images/react_icon.png" alt="React Development">
                 </div>
             </div>
+            <!-- Particles container -->
+            <div class="expertise-particles-container"></div>
         </section>
 
         <!-- Overview Section -->
@@ -573,7 +575,46 @@
 </footer>
     <script src="../assets/js/main.js"></script>
     <script>
+        // Create particles for the particle container
+        function createParticles() {
+            const container = document.querySelector('.expertise-particles-container');
+            if (!container) return;
+            
+            const particleCount = 25;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'expertise-particle';
+                
+                // Random size between 3px and 10px
+                const size = Math.random() * 7 + 3;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                
+                // Random position
+                const posX = Math.random() * 100;
+                const posY = Math.random() * 100;
+                particle.style.left = `${posX}%`;
+                particle.style.top = `${posY}%`;
+                
+                // Random opacity
+                particle.style.opacity = Math.random() * 0.5 + 0.1;
+                
+                // Random animation delay
+                const delay = Math.random() * 5;
+                particle.style.animationDelay = `${delay}s`;
+                
+                // Random animation duration between 10 and 20 seconds
+                const duration = Math.random() * 10 + 10;
+                particle.style.animationDuration = `${duration}s`;
+                
+                container.appendChild(particle);
+            }
+        }
+        
         window.addEventListener('DOMContentLoaded', function() {
+            createParticles();
+            
             // Reveal animation
             const revealSections = document.querySelectorAll('.reveal-section');
             
