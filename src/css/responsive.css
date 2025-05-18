@@ -3918,22 +3918,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 50%;
-        background-color: transparent;
+        border-radius: 8px;
+        background-color: rgba(25, 41, 57, 0.08);
         flex-shrink: 0;
-        box-shadow: none;
-    }
-    
-    .solution-header .solution-icon i {
-        font-size: 1.25em;
-        color: #6eaf2a;
-        background-color: rgba(110, 175, 42, 0.15);
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
     
     .solution-header h3 {
@@ -3968,43 +3955,7 @@
     .solution-header .solution-icon {
         width: 40px;
         height: 40px;
-        min-width: 40px;
-        border-radius: 50%;
-        background-color: transparent;
-        box-shadow: none;
-    }
-    
-    .solution-header .solution-icon i {
-        font-size: 1.1em;
-        color: #6eaf2a;
-        background-color: rgba(110, 175, 42, 0.15);
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .solution-header .solution-icon {
-        width: 40px;
-        height: 40px;
-        min-width: 40px;
-        border-radius: 50%;
-        background-color: transparent;
-        box-shadow: none;
-    }
-    
-    .solution-header .solution-icon i {
-        font-size: 1.1em;
-        color: #6eaf2a;
-        background-color: rgba(110, 175, 42, 0.15);
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        font-size: 1rem;
     }
     
     .fintech-solution-card .solution-content {
@@ -4773,28 +4724,3 @@
         margin-bottom: 0.625em;
     }
 }
-
-@media (max-width: 768px) {
-    // ... existing code ...
-    .feature-item i {
-        margin-right: 8px;
-        font-size: 16px;
-        color: #6eaf2a;
-    }
-    
-    .feature-item i.fa-check-circle {
-        color: #6eaf2a;
-    }
-// ... existing code ...
-
-@media (max-width: 576px) {
-    // ... existing code ...
-    .feature-item i {
-        font-size: 0.85rem;
-        color: #6eaf2a;
-    }
-    
-    .feature-item i.fa-check-circle {
-        color: #6eaf2a;
-    }
-// ... existing code ...
