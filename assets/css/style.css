@@ -6617,3 +6617,22 @@
     top: 0;
 }
 
+/* Remove outline from navbar elements when clicked */
+.navbar a:focus:not(:focus-visible),
+.navbar .dropdown-toggle:focus:not(:focus-visible),
+.navbar .dropdown-box:focus:not(:focus-visible),
+.navbar .menu-toggle:focus:not(:focus-visible),
+.navbar img:focus:not(:focus-visible) {
+    outline: none;
+}
+
+/* Maintain focus-visible for keyboard navigation accessibility */
+.navbar a:focus-visible,
+.navbar .dropdown-toggle:focus-visible,
+.navbar .dropdown-box:focus-visible,
+.navbar .menu-toggle:focus-visible,
+.navbar img:focus-visible {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}
+

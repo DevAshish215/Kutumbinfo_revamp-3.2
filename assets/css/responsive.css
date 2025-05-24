@@ -4569,8 +4569,7 @@
 }
 
 @media (max-width: 768px) {
-  // ... existing code ...
-  
+   
   /* Show paragraphs in service boxes on mobile (instead of hiding) */
   .services-section .service-content p {
     display: block !important;
@@ -4775,7 +4774,7 @@
 }
 
 @media (max-width: 768px) {
-    // ... existing code ...
+    /* ... existing code ... */
     .feature-item i {
         margin-right: 8px;
         font-size: 16px;
@@ -4785,10 +4784,10 @@
     .feature-item i.fa-check-circle {
         color: #6eaf2a;
     }
-// ... existing code ...
+}
 
 @media (max-width: 576px) {
-    // ... existing code ...
+    /* ... existing code ... */
     .feature-item i {
         font-size: 0.85rem;
         color: #6eaf2a;
@@ -4797,4 +4796,5 @@
     .feature-item i.fa-check-circle {
         color: #6eaf2a;
     }
-// ... existing code ...
+}
+

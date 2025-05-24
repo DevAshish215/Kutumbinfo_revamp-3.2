@@ -147,27 +147,29 @@
             </div>
         </div>
         <div class="dropdown">
-            <a href="#" class="dropdown-toggle" onclick="toggleDropdown(this); return false;">Products <span class="dropdown-arrow">v</span></a>
-            <div class="dropdown-content">
+            <a href="#" class="dropdown-toggle" onclick="toggleDropdown(this); return false;" role="button" aria-expanded="false" aria-controls="products-dropdown">Products <span class="dropdown-arrow" aria-hidden="true">v</span></a>
+            <div class="dropdown-content" id="products-dropdown" role="menu">
                 <div class="dropdown-box dropdown-box-width" onclick="goToNonFintech()">
-                    <img src="assets/images/icons/non-fintech.png" alt="Non-Fintech Products Icon">
+                    <img src="assets/images/icons/non-fintech.png" alt="Non-Fintech Products Icon" loading="lazy" decoding="async">
                     <div>
                         <strong>Non-Fintech Products:</strong>
-                        <ul>
-                            <li>Rental Solution (PCT)</li>
+                        <ul>                                    
                             <li>School Management</li>
                             <li>Nagar Parishad Management Software</li>
+                            <li>Rental Solution (PCT)</li>
+                            <li>Borwell Management System</li>
                         </ul>
                     </div>
                 </div>
                 <div class="dropdown-box dropdown-box-width" onclick="goToFintech()">
-                    <img src="assets/images/icons/fintech.png" alt="Fintech Products Icon">
+                    <img src="assets/images/icons/fintech.png" alt="Fintech Products Icon" loading="lazy" decoding="async">
                     <div>
                         <strong>Fintech Products:</strong>
                         <ul>
                             <li>KYCPLUS</li>
-                            <li>Information System WPS</li>
+                            <li>AZAPI OCR & CAPTCHA APIs</li>
                             <li>RPACPC</li>
+                            <li>WPS Nexus</li>
                         </ul>
                     </div>
                 </div>
